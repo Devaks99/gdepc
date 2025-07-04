@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia CNU 2025 Interativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./src/css/dark-theme.css" rel="stylesheet">
+    <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header com navegação -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+             <a href="/"><div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-blue-600 font-bold text-lg">C</span></a> 
+                    </div>
+                    <a href="/" class="logo-link">
+                     <h1>Guia CNU 2025</h1> 
+                     </a>
+                </div>
+
+                <!-- Menu Desktop -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="nav-link hover:text-blue-200 transition-colors duration-200 font-medium">Início</a></li>
+                    <li><a href="#flashcards" class="nav-link hover:text-blue-200 transition-colors duration-200 font-medium">Flashcards</a></li>
+                    <li><a href="#quiz" class="nav-link hover:text-blue-200 transition-colors duration-200 font-medium">Jogo de Perguntas</a></li>
+                    <li><a href="#about" class="nav-link hover:text-blue-200 transition-colors duration-200 font-medium">Sobre o Projeto</a></li>
+                </ul>
+
+                <!-- Toggle tema -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-blue-700 hover:bg-blue-600 transition-colors duration-200">
+                        <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Menu Mobile Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 hidden">
+                <ul class="space-y-2">
+                    <li><a href="#home" class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">Início</a></li>
+                    <li><a href="#flashcards" class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">Flashcards</a></li>
+                    <li><a href="#quiz" class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">Jogo de Perguntas</a></li>
+                    <li><a href="#about" class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">Sobre o Projeto</a></li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-blue-500">
+                    <button id="mobile-theme-toggle" class="w-full p-2 rounded-lg bg-blue-700 hover:bg-blue-600 transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <svg id="mobile-theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <span>Alternar Tema</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Seção Início -->
+        <section id="home" class="section-content">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+                        Bem-vindo ao <span class="text-blue-600">Guia CNU 2025</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Seu recurso completo e interativo para se preparar para o Concurso Nacional Unificado. 
+                        Estude com flashcards inteligentes e teste seus conhecimentos com nosso jogo de perguntas.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Flashcards Inteligentes</h3>
+                            <p class="text-gray-600 mb-6">
+                                Estude com flashcards organizados por categoria, cobrindo todos os tópicos do edital CNU 2025.
+                            </p>
+                            <button onclick="showSection('flashcards')" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                                Começar a Estudar
+                            </button>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Jogo de Perguntas</h3>
+                            <p class="text-gray-600 mb-6">
+                                Teste seus conhecimentos com perguntas de múltipla escolha e receba feedback instantâneo.
+                            </p>
+                            <button onclick="showSection('quiz')" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
+                                Iniciar Quiz
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Flashcards -->
+        <section id="flashcards" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Flashcards de Estudo</h2>
+                    <p class="text-xl text-gray-600">Estude de forma eficiente com nossos flashcards organizados por categoria</p>
+                </div>
+
+                <!-- Filtros -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="filter-btn active bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200" data-category="all">
+                        Todos
+                    </button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors duration-200" data-category="conhecimentos-gerais">
+                        Conhecimentos Gerais
+                    </button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors duration-200" data-category="conhecimentos-especificos">
+                        Conhecimentos Específicos
+                    </button>
+                </div>
+
+                <!-- Container dos Flashcards -->
+                <div id="flashcards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Flashcards serão inseridos aqui via JavaScript -->
+                </div>
+
+                <!-- Controles de navegação -->
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button id="prev-card" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                        ← Anterior
+                    </button>
+                    <span id="card-counter" class="flex items-center px-4 py-3 text-gray-600 font-medium">
+                        1 de 10
+                    </span>
+                    <button id="next-card" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                        Próximo →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Quiz -->
+        <section id="quiz" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Jogo de Perguntas</h2>
+                    <p class="text-xl text-gray-600">Teste seus conhecimentos e acompanhe seu progresso</p>
+                </div>
+
+                <!-- Quiz Container -->
+                <div id="quiz-container" class="max-w-4xl mx-auto">
+                    <!-- Tela inicial do quiz -->
+                    <div id="quiz-start" class="text-center bg-white rounded-xl shadow-lg p-8">
+    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+    </div>
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Pronto para o desafio?</h3>
+    <p class="text-gray-600 mb-8">Escolha o número de perguntas e teste seus conhecimentos sobre o CNU 2025!</p>
+    
+    <div class="grid grid-cols-2 gap-4 mb-8">
+        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="20">
+            20 Perguntas
+        </button>
+        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="50">
+            50 Perguntas
+        </button>
+        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="100">
+            100 Perguntas
+        </button>
+        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="150">
+            150 Perguntas
+        </button>
+    </div>
+    
+    <button id="start-quiz-btn" class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium text-lg">
+        Iniciar Quiz
+    </button>
+   </div>
+
+                    <!-- Área do jogo -->
+                    <div id="quiz-game" class="hidden">
+                        <!-- Progresso -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 font-medium">Pergunta <span id="current-question">1</span> de <span id="total-questions">10</span></span>
+                                <span class="text-gray-600 font-medium">Pontuação: <span id="current-score" class="text-green-600 font-bold">0</span></span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 10%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-6">
+                            <h3 id="question-text" class="text-xl font-bold text-gray-800 mb-6">
+                                <!-- Pergunta será inserida aqui -->
+                            </h3>
+                            <div id="answers-container" class="space-y-4">
+                                <!-- Alternativas serão inseridas aqui -->
+                            </div>
+                        </div>
+
+                        <!-- Feedback -->
+                        <div id="feedback-container" class="hidden bg-white rounded-xl shadow-lg p-6 mb-6">
+                            <div id="feedback-content">
+                                <!-- Feedback será inserido aqui -->
+                            </div>
+                            <button id="next-question-btn" class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                                Próxima Pergunta
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Resultado final -->
+                    <div id="quiz-results" class="hidden text-center bg-white rounded-xl shadow-lg p-8">
+                        <div id="results-content">
+                            <!-- Resultados serão inseridos aqui -->
+                        </div>
+                        <div class="flex justify-center space-x-4 mt-8">
+                            <button id="restart-quiz-btn" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                                Reiniciar Quiz
+                            </button>
+                            <button id="review-answers-btn" class="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium">
+                                Ver Correções
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="section-content hidden">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Sobre o Projeto</h2>
+                    <p class="text-xl text-gray-600">Conheça mais sobre o Guia CNU 2025 Interativo</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">O que é o CNU 2025?</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            O Concurso Nacional Unificado (CNU) é uma iniciativa do governo federal que visa unificar 
+                            os concursos públicos para diversos órgãos da administração pública federal. O CNU 2025 
+                            representa uma oportunidade única para candidatos que desejam ingressar no serviço público.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Conhecimentos Gerais</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Estado Democrático de Direito</li>
+                                <li>• Ética no Serviço Público</li>
+                                <li>• Diversidade e Inclusão</li>
+                                <li>• Administração Pública</li>
+                                <li>• Realidade Brasileira</li>
+                                <li>• Políticas Públicas</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Conhecimentos Específicos - Bloco 3</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Ciência, Tecnologia e Sociedade</li>
+                                <li>• Políticas de CT&I</li>
+                                <li>• Gestão de Projetos</li>
+                                <li>• TICs e Dados</li>
+                                <li>• Metodologia Científica</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-8 mt-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Como usar este guia?</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-blue-600 font-bold text-lg">1</span>
+                                </div>
+                                <h4 class="font-bold text-gray-800 mb-2">Estude com Flashcards</h4>
+                                <p class="text-gray-600 text-sm">Use os flashcards para revisar conceitos importantes de forma eficiente</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-green-600 font-bold text-lg">2</span>
+                                </div>
+                                <h4 class="font-bold text-gray-800 mb-2">Teste seus Conhecimentos</h4>
+                                <p class="text-gray-600 text-sm">Faça o quiz para avaliar seu aprendizado e identificar pontos de melhoria</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-purple-600 font-bold text-lg">3</span>
+                                </div>
+                                <h4 class="font-bold text-gray-800 mb-2">Acompanhe seu Progresso</h4>
+                                <p class="text-gray-600 text-sm">Monitore seu desempenho e foque nos tópicos que precisam de mais atenção</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 Guia CNU 2025. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
+

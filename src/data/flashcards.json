@@ -1,0 +1,25 @@
+{
+  "flashcards": [
+    {
+      "id": 1,
+      "category": "conhecimentos-gerais",
+      "title": "Estado Democrático de Direito",
+      "question": "O que caracteriza um Estado Democrático de Direito?",
+      "answer": "É um sistema político que combina democracia e estado de direito..."
+    }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "question": "Qual princípio da administração pública determina que o administrador deve agir sempre conforme a lei?",
+      "options": [
+        "Impessoalidade",
+        "Legalidade",
+        "Moralidade",
+        "Publicidade"
+      ],
+      "correct": 1,
+      "explanation": "O princípio da legalidade estabelece que..."
+    }
+  ]
+}
