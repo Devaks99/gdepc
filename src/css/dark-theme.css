@@ -1,94 +1,547 @@
-/* Tema Escuro Personalizado */
 .dark {
-    background-color: #1a202c;
-    color: #e2e8f0;
+     background-color: #0f172a !important;
+            color: #dbd6d6;}
+
+/* Backgrounds principais */
+.dark .bg-logo {
+ background-color: #474f86e7;
+}
+
+.dark .text-logo{
+color: #559fff;
 }
 
 .dark .bg-gray-50 {
-    background-color: #1a202c !important;
+    background-color: #0f172a !important;
 }
 
 .dark .bg-white {
-    background-color: #2d3748 !important;
-    color: #e2e8f0 !important;
+    background-color: #474f862f !important;
+    color: #f1f5f9 !important;
 }
 
+.dark .bg-gray-100 {
+    background-color: #334155 !important;
+    color: #c4d0dd !important;
+}
+
+.dark .bg-gray-200 {
+    background-color: #787b80 !important;
+    color: #f1f5f9 !important;
+}
+
+.dark .bg-gray-800 {
+    background-color: #0f172a !important;
+}
+
+/* Cores de texto*/
 .dark .text-gray-800 {
+      color: #dbdbdb !important;
+}
+
+.dark .text-gray-700 {
     color: #e2e8f0 !important;
 }
 
 .dark .text-gray-600 {
-    color: #a0aec0 !important;
-}
-
-.dark .text-gray-700 {
-    color: #cbd5e0 !important;
+   color: #d1d5db !important;
 }
 
 .dark .text-gray-500 {
-    color: #718096 !important;
+    color: #94a3b8 !important;
 }
 
 .dark .text-gray-400 {
-    color: #a0aec0 !important;
+    color: #2781ff !important;
 }
 
-.dark .bg-gray-200 {
-    background-color: #4a5568 !important;
-    color: #e2e8f0 !important;
+.dark .text-white1 {
+  color: #eeeeee;
 }
 
-.dark .bg-gray-800 {
-    background-color: #1a202c !important;
+/* Cores específicas para elementos importantes */
+.dark .text-blue-600 {
+    color: #60a5fa !important;
 }
 
-.dark .border-gray-200 {
-    border-color: #4a5568 !important;
+.dark .text-blue-800 {
+    color: #93c5fd !important;
 }
 
-.dark .hover\:border-blue-300:hover {
-    border-color: #63b3ed !important;
+.dark .text-green-600 {
+    color: #1dac77 !important;
 }
 
-.dark .hover\:bg-blue-50:hover {
-    background-color: #2c5282 !important;
+.dark .text-purple-600 {
+    color: #a78bfa !important;
 }
 
-.dark .hover\:bg-gray-300:hover {
-    background-color: #2d3748 !important;
-}
-
+/* Backgrounds coloridos com melhor contraste */
 .dark .bg-blue-100 {
-    background-color: #2c5282 !important;
+    background-color: #133eccea !important;
+    color: #dbeafe !important;
 }
+ .dark .bg-red-100 {
+ color:#dbeafe;
+ background-color: #ff3333b9;
+ } 
+
+ .dark .bg-red-500 {
+ background-color: #ff2323ad;
+ }
+
+ .dark .bg-green-200{
+  color:#dbeafe;
+  background-color:rgba(43, 190, 55, 0.726);
+ }
 
 .dark .bg-green-100 {
-    background-color: #276749 !important;
+    background-color: #135540 !important;
+    color: #d1fae5 !important;
 }
 
 .dark .bg-purple-100 {
-    background-color: #553c9a !important;
+    background-color: #4b278a !important;
+    color: #e9d5ff !important;
 }
 
-.dark .bg-gray-100 {
-    background-color: #4a5568 !important;
+.dark .bg-blue-600 {
+    background-color: #2563eb !important;
 }
 
-.dark .bg-gray-50 {
-    background-color: #2d3748 !important;
+.dark .bg-blue-200 {
+background-color: #52a0ff;
 }
 
-/* Transições suaves para mudança de tema */
+.dark .bg-green-600 {
+    background-color: #16a34a !important;
+}
+
+.dark .bg-footer{
+color: #6eafff;
+background-color: #474f863a;
+}
+
+.dark .text-footer {
+ color: #559fff;
+}
+
+/* Hovers melhorados */
+.dark .hover\:bg-blue-200:hover {
+    background-color: #265bec !important;
+}
+
+.dark .hover\:bg-gray-300:hover {
+    background-color: #334155 !important;
+}
+
+.dark .hover\:bg-blue-50:hover {
+    background-color: #244eda !important;
+}
+
+.dark .hover\:bg-blue-700:hover {
+    background-color: #124ff5 !important;
+}
+
+.dark .hover\:bg-green-700:hover {
+    background-color: #1b7a3e !important;
+}
+
+.dark .hover\:bg-gray-700:hover {
+    background-color: #556680 !important;
+}
+
+/* Bordas */
+.dark .border-gray-200 {
+    border-color: #475569 !important;
+}
+
+.dark .border-blue-500 {
+    border-color: #2c7dff !important;
+}
+
+.dark .hover\:border-blue-300:hover {
+    border-color: #52a0ff !important;
+}
+
+/* Sombras melhoradas para dark mode */
+.dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Transições suaves */
 * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Melhorar contraste no tema escuro */
-.dark .shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
+/* Estilos para títulos destacados */
+        .title-highlight {
+            background: linear-gradient(135deg, #3B82F6, #3451af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+        }
+        
+        .title-secondary {
+            color: #086648;
+            text-shadow: 0 1px 2px rgba(5, 150, 105, 0.2);
+        }
+
+        .dark .title-secondary {
+            color: #10b981ce;
+        }
+        
+        .title-tertiary {
+            color: #a71a1ae5;
+            text-shadow: 0 1px 2px rgba(220, 38, 38, 0.2);
+        }
+        
+        .dark .title-tertiary {
+            color: #ff7b7bda;
+        }
+        
+        .title-quaternary {
+            color: #6b30d1e7;
+            text-shadow: 0 1px 2px rgba(124, 58, 237, 0.2);
+        }
+        
+        .dark .title-quaternary {
+            color: #A78BFA;
+        }
+        
+        .title-main {
+            color: #1E40AF;
+            text-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+        }
+        
+        .dark .title-main {
+            color: #60A5FA;
+        }
+
+/* Melhorias para responsividade - Mobile First */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Centralização e tamanhos de fonte ajustados */
+    .text-5xl {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        text-align: center;
+    }
+    
+    .text-6xl {
+        font-size: 3rem !important;
+        line-height: 1.1;
+        text-align: center;
+    }
+    
+    .text-4xl {
+        font-size: 2rem !important;
+        line-height: 1.3;
+        text-align: center;
+    }
+    
+    .text-2xl {
+        font-size: 1.5rem !important;
+        line-height: 1.4;
+        text-align: center;
+    }
+    
+    /* Espaçamentos ajustados */
+    .py-16 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .p-8 {
+        padding: 1.5rem !important;
+    }
+    
+    .px-8 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    .py-4 {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    
+    /* Ícones e elementos visuais */
+    .w-16.h-16 {
+        width: 3rem !important;
+        height: 3rem !important;
+        margin: 0 auto;
+    }
+    
+    .w-20.h-20 {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+        margin: 0 auto;
+    }
+    
+    /* Melhor espaçamento para cards e seções */
+    .grid {
+        gap: 1rem !important;
+    }
+    
+    .space-y-4 > * + * {
+        margin-top: 1rem !important;
+    }
+    
+    .space-y-6 > * + * {
+        margin-top: 1.5rem !important;
+    }
+    
+    /* Centralização de conteúdo */
+    .flex {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flex-col {
+        align-items: center;
+    }
 }
 
-.dark .shadow-xl {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
+@media (max-width: 480px) {
+    .text-xl {
+        font-size: 1.125rem !important;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    .text-lg {
+        font-size: 1rem !important;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    .py-16 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .p-8 {
+        padding: 1rem !important;
+    }
+    
+    .px-4 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+    
+    /* Melhor espaçamento para telas muito pequenas */
+    .space-y-2 > * + * {
+        margin-top: 0.5rem !important;
+    }
+    
+    .space-y-3 > * + * {
+        margin-top: 0.75rem !important;
+    }
+    
+    /* Botões mais tocáveis */
+    .btn {
+        min-height: 44px !important;
+        padding: 0.75rem 1rem !important;
+    }
 }
 
+/* Melhorias específicas para flashcards */
+.dark .filter-btn {
+    border: 1px solid #475569;
+}
+
+.dark .filter-btn.active {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+}
+
+.dark .filter-btn:not(.active) {
+    background-color: #364458 !important;
+    color: #e2e8f0 !important;
+}
+
+.dark .filter-btn:not(.active):hover {
+    background-color: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+/* Melhorias para quiz */
+.dark .quiz-size-btn {
+    background-color: #1e40afb0 !important;
+    color: #dbeafe !important;
+    border: 1px solid #2563eb;
+}
+
+.dark .quiz-size-btn:hover {
+    background-color: #386cfcef !important;
+    color: #ffffff !important;
+}
+
+/* Melhorias para o progresso */
+.dark #progress-bar {
+    background-color: #3b82f6 !important;
+}
+
+/* Melhorias para feedback - CORREÇÃO PRINCIPAL */
+.dark #feedback-container {
+    background-color: #1e293b !important;
+    border: 1px solid #475569;
+}
+
+/* Feedback de resposta correta */
+.dark .feedback-correct {
+    background-color: #01b37a !important;
+    color: #cbe9d9 !important;
+}
+
+.dark .feedback-correct:hover {
+    color: #ffffff !important;
+}
+
+/* Feedback de resposta incorreta */
+.dark .feedback-incorrect {
+    background-color: #ff2222 !important;
+    color: #fee2e2 !important;
+}
+
+.dark .feedback-incorrect:hover {
+    color: #ffffff !important;
+}
+
+/* Feedback geral - hover para white */
+.dark .feedback-message:hover {
+    color: #ffffff !important;
+}
+
+.dark .feedback-text:hover {
+    color: #ffffff !important;
+}
+
+/* Melhorias para botões disabled */
+.dark .disabled\:opacity-50:disabled {
+    opacity: 0.5;
+    background-color: #64748b !important;
+}
+
+/* Melhorias para navegação mobile */
+.dark #mobile-menu {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+}
+
+/* Melhorias para o header fixo */
+.dark header {
+    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%) !important;
+}
+
+/* Ajustes específicos para categorias nos flashcards */
+.category-tag {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid #d1d5db;
+}
+
+.dark .category-tag {
+    background-color: #374151 !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #475569;
+}
+
+/* Ajustes para melhor legibilidade */
+.dark p, .dark li, .dark span {
+    line-height: 1.6;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    line-height: 1.3;
+}
+
+/* Melhorias adicionais para responsividade e centralização */
+@media (max-width: 768px) {
+    /* Centralização melhorada para seções */
+    .section-center {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Cards e containers centralizados */
+    .card, .container, .main-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Melhor espaçamento para listas */
+    .list-container {
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+    /* Botões responsivos */
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Formulários centralizados */
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Melhorias específicas para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .text-4xl {
+        font-size: 2.25rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.75rem !important;
+    }
+}

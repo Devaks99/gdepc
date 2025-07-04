@@ -35,7 +35,7 @@ const flashcardsData = [
     {
         id: 4,
         title: 'Lei de Acesso à Informação',
-        question: 'Quais são os prazos máximos de sigilo de informações na LAI?',
+        question: 'Quais são os prazos máximos de sigilo de informações na LAI (Lei de Acesso à Informação)?',
         answer: 'A LAI estabelece que o prazo máximo de sigilo é de 25 anos para informações ultrassecretas, 15 anos para secretas e 5 anos para reservadas.',
         category: 'conhecimentos-gerais'
     },
@@ -81,7 +81,6 @@ const flashcardsData = [
         answer: '1) Uso comum do povo; 2) Uso especial; 3) Dominicais.',
         category: 'conhecimentos-gerais'
     },
-    // ========== NOVOS FLASHCARDS DE CONHECIMENTOS GERAIS (20 adicionais) ==========
     {
         id: 11,
         title: 'Princípio da Moralidade',
@@ -92,7 +91,7 @@ const flashcardsData = [
     {
         id: 12,
         title: 'Lei de Responsabilidade Fiscal',
-        question: 'Quais são os principais objetivos da LRF?',
+        question: 'Quais são os principais objetivos da LRF (Lei de Responsabilidade Fiscal?',
         answer: 'Controlar gastos públicos, planejar orçamentos, evitar endividamento excessivo e garantir transparência na gestão fiscal.',
         category: 'conhecimentos-gerais'
     },
@@ -148,7 +147,7 @@ const flashcardsData = [
     {
         id: 20,
         title: 'Lei Anticorrupção',
-        question: 'Quais atos são considerados lesivos pela Lei 12.846/2013?',
+        question: 'Quais atos são considerados lesivos pela Lei 12.846/2013 (Lei Anticorrupção)?',
         answer: 'Prometer/doar vantagem indevida, fraudar licitações, obstar fiscalização, manipular contratos e dificultar investigações.',
         category: 'conhecimentos-gerais'
     },
@@ -218,7 +217,7 @@ const flashcardsData = [
     {
         id: 30,
         title: 'Parcerias Público-Privadas',
-        question: 'Quais as características das PPPs?',
+        question: 'Quais as características das PPPs (Parceiras Público-Privadas)?',
         answer: 'Contratos de longo prazo, com contraprestação vinculada a resultados, risco compartilhado e objeto de relevante interesse público.',
         category: 'conhecimentos-gerais'
     },
@@ -234,7 +233,7 @@ const flashcardsData = [
     {
         id: 102,
         title: 'LGPD',
-        question: 'Quais são as bases legais para tratamento de dados na LGPD?',
+        question: 'Quais são as bases legais para tratamento de dados na LGPD? (Lei Geral de Proteção de Dados Pessoais)',
         answer: 'Consentimento, execução de contrato, obrigação legal, políticas públicas, estudos por órgãos de pesquisa, proteção da vida, tutela da saúde, interesse legítimo do controlador.',
         category: 'conhecimentos-especificos'
     },
@@ -242,7 +241,7 @@ const flashcardsData = [
         id: 103,
         title: 'Metodologias Ágeis',
         question: 'Quais as principais diferenças entre Scrum e Kanban?',
-        answer: 'Scrum: sprints fixos, papéis definidos. Kanban: fluxo contínuo, limite de trabalho em progresso.',
+        answer: 'É um framework com papéis definidos, ciclos iterativos (sprints) e cerimônias fixas, visando a entrega incremental de valor. Kanban, por outro lado, é um sistema visual que gerencia o fluxo de trabalho, permitindo flexibilidade e entregas contínuas, sem ciclos definidos ou papéis obrigatórios.',
         category: 'conhecimentos-especificos'
     },
     {
@@ -255,7 +254,7 @@ const flashcardsData = [
     {
         id: 105,
         title: 'Computação em Nuvem',
-        question: 'Quais são os modelos de serviço em cloud computing?',
+        question: 'Quais são os modelos de serviço em cloud computing? (Computação em Nuvem)',
         answer: 'IaaS (Infraestrutura), PaaS (Plataforma), SaaS (Software) - camadas de abstração tecnológica.',
         category: 'conhecimentos-especificos'
     },
@@ -276,7 +275,7 @@ const flashcardsData = [
     {
         id: 108,
         title: 'Sistemas Governamentais',
-        question: 'Qual a função do SISP no governo federal?',
+        question: 'Qual a função do SISP(Sistema de Inteligência de Segurança Pública.) no governo federal?',
         answer: 'O Sistema de Administração dos Recursos de TI estabelece normas para gestão de tecnologia no governo federal.',
         category: 'conhecimentos-especificos'
     },
@@ -333,7 +332,7 @@ const flashcardsData = [
         id: 116,
         title: 'Banco de Dados',
         question: 'Qual a diferença entre SQL e NoSQL?',
-        answer: 'SQL: estruturado, esquema rígido. NoSQL: não-relacional, esquema flexível, escalável horizontalmente.',
+        answer: 'SQL (Structured Query Language) usa um modelo relacional, com dados organizados em tabelas com linhas e colunas, enquanto NoSQL oferece modelos mais flexíveis e não relacionais, como documentos, chave-valor ou grafos.',
         category: 'conhecimentos-especificos'
     },
     {
@@ -1367,7 +1366,7 @@ const quizData = [
     },
     {
         id: 78,
-        question: 'Qual desses NÃO é um exemplo de dado pessoal sensível na LGPD?',
+        question: 'Qual desses NÃO é um exemplo de dado pessoal sensível na LGPD (Lei Geral de Proteção de Dados Pessoais)?',
         options: [
             'Opinião política',
             'Dado biométrico',
@@ -1691,7 +1690,7 @@ const quizData = [
     },
     {
         id: 105,
-        question: 'Qual desses NÃO é um tipo de certificado digital da ICP-Brasil?',
+        question: 'Qual desses NÃO é um tipo de certificado digital da ICP-Brasil (Infraestrutura de Chaves Públicas brasileira)?',
         options: [
             'A1',
             'A3',
@@ -1835,7 +1834,7 @@ const quizData = [
     },
     {
         id: 117,
-        question: 'Qual desses NÃO é um componente do e-PING?',
+        question: 'Qual desses NÃO é um componente do e-PING (Padrão de Interoperabilidade de Governo Eletrônico)?',
         options: [
             'Interconexão',
             'Segurança',
@@ -1859,7 +1858,7 @@ const quizData = [
     },
     {
         id: 119,
-        question: 'Qual desses NÃO é um módulo do SIGA?',
+        question: 'Qual desses NÃO é um módulo do SIGA (Sistema de Informações Gerenciais do Governo Federal )?',
         options: [
             'Protocolo',
             'Processo',
@@ -1883,7 +1882,7 @@ const quizData = [
     },
     {
         id: 121,
-        question: 'Qual desses NÃO é um benefício do SEI?',
+        question: 'Qual desses NÃO é um benefício do SEI (Sistema Eletrônico de Informações?',
         options: [
             'Eliminação completa de documentos físicos',
             'Redução de custos com papel e impressão',
@@ -1931,7 +1930,7 @@ const quizData = [
     },
     {
         id: 125,
-        question: 'Qual desses NÃO é um módulo do SIAFI?',
+        question: 'Qual desses NÃO é um módulo do SIAFI(Sistema Integrado de Administração Financeira)?',
         options: [
             'Contabilidade',
             'Orçamento',
@@ -1979,7 +1978,7 @@ const quizData = [
     },
     {
         id: 129,
-        question: 'Qual desses NÃO é um objetivo do SICONFI?',
+        question: 'Qual desses NÃO é um objetivo do SICONFI (Sistema de Informações Contábeis e Fiscais)?',
         options: [
             'Transparência das contas públicas',
             'Fiscalização pelo Tribunal de Contas',
@@ -2003,7 +2002,7 @@ const quizData = [
     },
     {
         id: 131,
-        question: 'Qual desses NÃO é um tipo de informação disponível no SIOPS?',
+        question: 'Qual desses NÃO é um tipo de informação disponível no SIOPS(Sistema de Informações sobre Orçamentos Públicos em Saúde)?',
         options: [
             'Receitas destinadas à saúde',
             'Despesas executadas em saúde',
@@ -2027,7 +2026,7 @@ const quizData = [
     },
     {
         id: 133,
-        question: 'Qual desses NÃO é um objetivo do SIM?',
+        question: 'Qual desses NÃO é um objetivo do SIM(Sistema de Informações sobre Mortalidade)?',
         options: [
             'Identificar causas de morte',
             'Subsidiar políticas de saúde',
@@ -2051,7 +2050,7 @@ const quizData = [
 },
 {
     id: 135,
-    question: 'Qual desses NÃO é um objetivo do SIH?',
+    question: 'Qual desses NÃO é um objetivo do SIH (Sistema de Informações Hospitalares )?',
     options: [
         'Controle de gastos com internações hospitalares',
         'Pagamento aos estabelecimentos de saúde',
@@ -2075,7 +2074,7 @@ const quizData = [
 },
 {
     id: 137,
-    question: 'Qual desses NÃO é um tipo de informação processada pelo SIA?',
+    question: 'Qual desses NÃO é um tipo de informação processada pelo SIA (Sistema de Informações sobre Nascidos Vivos)?',
     options: [
         'Procedimentos ambulatoriais realizados',
         'Medicamentos dispensados',
@@ -2099,7 +2098,7 @@ const quizData = [
 },
 {
     id: 139,
-    question: 'Qual desses NÃO é um objetivo do SINASC?',
+    question: 'Qual desses NÃO é um objetivo do SINASC (Sistema de Informações sobre Nascidos Vivos)?',
     options: [
         'Identificar características dos nascimentos',
         'Subsidiar políticas de saúde infantil',
@@ -2123,7 +2122,7 @@ const quizData = [
 },
 {
     id: 141,
-    question: 'Qual desses NÃO é um tipo de informação disponível no SI-PNI?',
+    question: 'Qual desses NÃO é um tipo de informação disponível no SI-PNI (Sistema de Informações sobre Imunizações)?',
     options: [
         'Doses aplicadas por tipo de vacina',
         'Cobertura vacinal por região',
@@ -2147,7 +2146,7 @@ const quizData = [
 },
 {
     id: 143,
-    question: 'Qual desses NÃO é um objetivo do SINAN?',
+    question: 'Qual desses NÃO é um objetivo do SINAN (Sistema de Informação de Agravos de Notificação)?',
     options: [
         'Detectar surtos epidemiológicos',
         'Monitorar doenças transmissíveis',
@@ -2171,7 +2170,7 @@ const quizData = [
 },
 {
     id: 145,
-    question: 'Qual desses NÃO é um tipo de informação disponível no SIMI?',
+    question: 'Qual desses NÃO é um tipo de informação disponível no SIMI (Sistema de Informações sobre Mortalidade Infantil)?',
     options: [
         'Causas de óbito infantil',
         'Características da mãe',
@@ -2195,7 +2194,7 @@ const quizData = [
 },
 {
     id: 147,
-    question: 'Qual desses NÃO é um tipo de informação disponível no SIOPE?',
+    question: 'Qual desses NÃO é um tipo de informação disponível no SIOPE(Sistema de Informações sobre Orçamentos Públicos em Educação)?',
     options: [
         'Receitas vinculadas à educação',
         'Despesas executadas em educação',
@@ -2219,7 +2218,7 @@ const quizData = [
 },
 {
     id: 149,
-    question: 'Qual desses NÃO é um objetivo do SIRH?',
+    question: 'Qual desses NÃO é um objetivo do SIRH(Sistema de Informações sobre Recursos para o Ensino)?',
     options: [
         'Mapear condições das escolas',
         'Planejar reformas e construções',
@@ -2409,7 +2408,7 @@ function createFlashcardElement(card) {
             <div class="flashcard-inner">
                 <div class="flashcard-front">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                        <span class="px-3 py-1 bg-red-500 rounded-full text-sm font-medium">
                             ${card.category === 'conhecimentos-gerais' ? 'Conhecimentos Gerais' : 'Conhecimentos Específicos'}
                         </span>
                         <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2422,7 +2421,7 @@ function createFlashcardElement(card) {
                 </div>
                 <div class="flashcard-back hidden">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                        <span class="px-3 py-1 bg-green-200 text-gray-700 rounded-full text-sm font-medium">
                             Resposta
                         </span>
                         <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
