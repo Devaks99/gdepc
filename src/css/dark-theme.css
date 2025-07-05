@@ -70,7 +70,7 @@ html.dark ::-webkit-scrollbar-thumb {
 }
 
 .dark .text-gray-600 {
-    color: #d1d5db !important;
+    color: #d1d5dbc7 !important;
 }
 
 .dark .text-gray-500 {
