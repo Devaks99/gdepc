@@ -3,12 +3,20 @@
     color: #dbd6d6;
 }
 
-
 .text-logo {
     background-color: #ffffff;
     padding: 1px 3px;
     border-radius: 4px;
     color: #559fff;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border: 2px solid #1e293b;
 }
 
 /* Backgrounds principais */
@@ -524,7 +532,7 @@ color: #ff0b0be8 !important;
 }
 
 .dark #about h2 {
-    color: #a78bfa !important;
+    color: #dddddd !important;
 }
 
 /* Garantir que o dark mode sobrescreva os estilos do light mode */
