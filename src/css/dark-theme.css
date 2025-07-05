@@ -3,6 +3,14 @@
     color: #dbd6d6;
 }
 
+
+.text-logo {
+    background-color: #ffffff;
+    padding: 1px 3px;
+    border-radius: 4px;
+    color: #559fff;
+}
+
 /* Backgrounds principais */
 .dark .text-logo {
     background-color: #ffffff;
@@ -10,6 +18,16 @@
     border-radius: 4px;
     color: #559fff;
 }
+.icon {
+  width: 1rem;
+  height: 1rem;
+  color: #dc2626; /* red-600 no modo claro */
+}
+
+.dark .icon{
+    color: white;
+}
+
 
 .dark .bg-gray-50 {
     background-color: #0f172a !important;

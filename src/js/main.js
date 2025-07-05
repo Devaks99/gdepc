@@ -2629,7 +2629,7 @@ function showFeedback(isCorrect, explanation, correctAnswer) {
             <div class="flex-shrink-0">
                 ${isCorrect ? 
                     '<div class="w-6 h-6 md:w-8 md:h-8 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 md:w-5 md:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>' :
-                    '<div class="w-6 h-6 md:w-8 md:h-8 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 md:w-5 md:h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div>'
+                    '<div class="w-6 h-6 md:w-8 md:h-8 bg-red-100 rounded-full flex items-center justify-center"><svg class="icon" class="w-4 h-4 md:w-5 md:h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div>'
                 }
             </div>
             <div class="flex-1">
