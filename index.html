@@ -2,26 +2,183 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Guia Concurso</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="./src/css/dark-theme.css" rel="stylesheet">
     <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <style>
+         /* Estilos para tags de categoria */
+        .category-tag.conhecimentos-gerais {
+            background-color: #2563eb !important;
+            color: #ffffff !important;
+        }
+
+        .category-tag.conhecimentos-especificos {
+            background-color: #dc2626 !important;
+            color: #ffffff !important;
+        }
+
+        /* Feedback - Light mode */
+        .feedback-correct {
+            background-color: #d1fae5 !important;
+            color: #065f46 !important;
+            border-left: 4px solid #10b981 !important;
+        }
+
+        .feedback-incorrect {
+            background-color: #fee2e2 !important;
+            color: #7f1d1d !important;
+            border-left: 4px solid #ef4444 !important;
+        }
+
+        .feedback-incorrect .question-number {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        /* Títulos seção Sobre - Light mode */
+        #about h3 {
+            color: #1e40af !important;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        #about h2 {
+            color: #6b30d1 !important;
+        }
+
+        /* Footer light mode */
+        .bg-footer {
+            background-color: #f8fafc;
+        }
+
+        .text-footer {
+            color: #64748b;
+        }
+
+        /* estilos para responsividade mobile */
+     @media (max-width: 640px) {
+        /* Ajuste de tamanhos de fonte */
+        .text-5xl, .text-6xl {
+            font-size: 2rem !important;
+            line-height: 1.2;
+        }
+        
+        .text-4xl {
+            font-size: 1.75rem !important;
+        }
+        
+        .text-2xl {
+            font-size: 1.5rem !important;
+        }
+        
+        .text-xl {
+            font-size: 1.1rem !important;
+        }
+
+        .text-logo {
+            background-color: #ffffff;
+            color: #3b82f6;
+            border-radius: 3px;
+            border: rgba(114, 114, 114, 0.596);
+            box-shadow: 2px rgba(26, 26, 26, 0.596);
+            padding: 1px 3px;
+        }
+
+        /* Espaçamentos reduzidos */
+        .py-16 {
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
+        }
+        
+        .px-4 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        /* Margens laterais para evitar colar nas bordas */
+        .container {
+            padding-left: 0.75rem !important;
+            padding-right: 0.75rem !important;
+        }
+
+        /* Ajuste para flashcards */
+        #flashcards-container {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
+        }
+
+        .flashcard {
+            margin: 0 0.5rem !important;
+            padding: 1rem !important;
+        }
+
+        /* Ajuste para botões */
+        .quiz-size-btn, .filter-btn {
+            padding: 0.5rem 1rem !important;
+            font-size: 0.9rem !important;
+        }
+
+        /* Quebra de linha forçada para títulos longos */
+        h1, h2, h3 {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        /* Espaçamento interno reduzido para cards */
+        .bg-white.rounded-xl.shadow-lg {
+            padding: 1rem !important;
+        }
+
+        /* Ajuste para o quiz */
+        #answers-container {
+            gap: 0.5rem !important;
+        }
+
+        #answers-container button {
+            padding: 0.75rem !important;
+            font-size: 0.9rem !important;
+        }
+    }
+
+    @media (max-width: 400px) {
+        /* Ajustes extras para telas muito pequenas */
+        .text-5xl, .text-6xl {
+            font-size: 1.75rem !important;
+        }
+        
+        .grid.grid-cols-2 {
+            grid-template-columns: 1fr !important;
+        }
+        
+        .flex.justify-center.space-x-4 {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        #quiz-start .grid.grid-cols-2 {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    </style>
+    <link href="./src/css/dark-theme.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 min-h-screen">
     <!-- Header com navegação -->
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-             <a href="/"><div class="w-8 h-8 bg-logo rounded-lg flex items-center justify-center">
-                        <span class="text-logo font-bold text-lg">GC</span></a> 
+   <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg fixed w-full top-0 z-50">
+    <nav class="container mx-auto px-4 py-3 md:py-4"> 
+        <div class="flex justify-between items-center">
+            <!-- Logo  -->
+            <div class="flex items-center space-x-3"> 
+                <a href="/" class="flex items-center space-x-3"> <!-- Agrupando logo e texto -->
+                    <div class="w-10 h-10 bg-logo rounded-lg flex items-center justify-center"> 
+                        <span class="text-logo font-bold text-xl">GC</span> 
                     </div>
-                    <a href="/" class="logo-link">
-                     <h1>Guia Concurso</h1> 
-                     </a>
-                </div>
+                    <h1 class="text-xl font-bold">Guia Concurso</h1> 
+                </a>
+            </div>
 
                 <!-- Menu Desktop -->
                 <ul class="hidden md:flex space-x-8">
@@ -32,7 +189,7 @@
                 </ul>
 
                 <!-- Toggle tema -->
-                <div class="hidden md:flex items-center space-x-4">
+              <div class="flex items-center space-x-6">
                     <button id="theme-toggle" class="p-2 rounded-lg bg-blue-700 hover:bg-blue-600 transition-colors duration-200">
                         <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -41,15 +198,16 @@
                 </div>
 
                 <!-- Menu Mobile Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 ml-4"> <!-- Adicionado ml-4 -->
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <!-- Ícone maior -->
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
+        </div>
 
             <!-- Menu Mobile -->
-            <div id="mobile-menu" class="md:hidden mt-4 pb-4 hidden">
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white">
                 <ul class="space-y-2">
                     <li><a href="#home" class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">Início</a></li>
                     <li><a href="#flashcards" class="nav-link block py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">Flashcards</a></li>
@@ -170,33 +328,33 @@
                 <div id="quiz-container" class="max-w-4xl mx-auto">
                     <!-- Tela inicial do quiz -->
                     <div id="quiz-start" class="text-center bg-white rounded-xl shadow-lg p-8">
-    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-        </svg>
-    </div>
-    <h3 class="text-2xl font-bold text-gray-800 mb-4">Pronto para o desafio?</h3>
-    <p class="text-gray-600 mb-8">Escolha o número de perguntas e teste seus conhecimentos sobre o CNU 2025 para o Bloco 3!</p>
-    
-    <div class="grid grid-cols-2 gap-4 mb-8">
-        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="20">
-            20 Perguntas
-        </button>
-        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="50">
-            50 Perguntas
-        </button>
-        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="100">
-            100 Perguntas
-        </button>
-        <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="150">
-            150 Perguntas
-        </button>
-    </div>
-    
-    <button id="start-quiz-btn" class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium text-lg">
-        Iniciar Quiz
-    </button>
-   </div>
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Pronto para o desafio?</h3>
+                        <p class="text-gray-600 mb-8">Escolha o número de perguntas e teste seus conhecimentos sobre o CNU 2025 para o Bloco 3!</p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="20">
+                                20 Perguntas
+                            </button>
+                            <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="50">
+                                50 Perguntas
+                            </button>
+                            <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="100">
+                                100 Perguntas
+                            </button>
+                            <button class="quiz-size-btn bg-blue-100 text-blue-800 px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-200 font-medium" data-size="150">
+                                150 Perguntas
+                            </button>
+                        </div>
+                        
+                        <button id="start-quiz-btn" class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium text-lg">
+                            Iniciar Quiz
+                        </button>
+                    </div>
 
                     <!-- Área de perguntas -->
                     <div id="quiz-game" class="hidden">
@@ -330,4 +488,3 @@
     <script src="./src/js/main.js"></script>
 </body>
 </html>
-

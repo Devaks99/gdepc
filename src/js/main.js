@@ -2275,8 +2275,19 @@ function setupEventListeners() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    mobileMenuBtn.addEventListener('click', function() {
+    mobileMenuBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Impede que o clique se propague para o documento
         mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnMenuButton = mobileMenuBtn.contains(event.target);
+        
+        if (!isClickInsideMenu && !isClickOnMenuButton && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
     });
 
     // Toggle tema
@@ -2400,24 +2411,28 @@ function renderFlashcards() {
     updateNavigationButtons();
 }
 
-function createFlashcardElement(card) {
+   function createFlashcardElement(card) {
     const cardDiv = document.createElement('div');
-    cardDiv.className = 'flashcard-container col-span-full max-w-2xl mx-auto';
+    cardDiv.className = 'flashcard-container col-span-full w-full px-2'; // Adicionado px-2 para espaçamento
+    
+    const categoryClass = card.category === 'conhecimentos-gerais' ? 
+        'bg-blue-600 text-white' : 'bg-red-600 text-white';
+    
     cardDiv.innerHTML = `
-        <div class="flashcard bg-white rounded-xl shadow-lg p-8 cursor-pointer transform transition-transform duration-300 hover:scale-105" data-id="${card.id}">
+        <div class="flashcard bg-white rounded-xl shadow-lg p-4 md:p-6 cursor-pointer transform transition-transform duration-300 hover:scale-105 mx-auto w-full max-w-md" data-id="${card.id}">
             <div class="flashcard-inner">
                 <div class="flashcard-front">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 bg-red-500 rounded-full text-sm font-medium">
-                            ${card.category === 'conhecimentos-gerais' ? 'Conhecimentos Gerais' : 'Conhecimentos Específicos'}
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2 py-1 ${categoryClass} rounded-full text-xs md:text-sm font-medium">
+                            ${card.category === 'conhecimentos-gerais' ? 'Gerais' : 'Específicos'}
                         </span>
-                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">${card.title}</h3>
-                    <p class="text-gray-600 mb-6">${card.question}</p>
-                    <p class="text-sm text-gray-500 text-center">Clique para ver a resposta</p>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3 break-words">${card.title}</h3>
+                    <p class="text-sm md:text-base text-gray-600 mb-3 md:mb-4 break-words">${card.question}</p>
+                    <p class="text-xs text-gray-500 text-center">Clique para ver a resposta</p>
                 </div>
                 <div class="flashcard-back hidden">
                     <div class="flex items-center justify-between mb-4">
@@ -2533,9 +2548,9 @@ function startQuiz() {
 }
 
 function showQuestion() {
-    const question = currentQuiz[currentQuestionIndex];
+  const question = currentQuiz[currentQuestionIndex];
     
-    // Atualizar progresso
+    // Atualizar progresso (mobile-friendly)
     document.getElementById('current-question').textContent = currentQuestionIndex + 1;
     document.getElementById('total-questions').textContent = currentQuiz.length;
     document.getElementById('current-score').textContent = quizScore;
@@ -2543,16 +2558,18 @@ function showQuestion() {
     const progressPercent = ((currentQuestionIndex + 1) / currentQuiz.length) * 100;
     document.getElementById('progress-bar').style.width = progressPercent + '%';
     
-    // Mostrar pergunta
+    // Mostrar pergunta com break-words
+    document.getElementById('question-text').className = 'text-base md:text-xl font-bold text-gray-800 mb-4 break-words';
     document.getElementById('question-text').textContent = question.question;
     
     // Mostrar alternativas
     const answersContainer = document.getElementById('answers-container');
+    answersContainer.className = 'space-y-2 md:space-y-3'; // Espaçamento menor em mobile
     answersContainer.innerHTML = '';
     
     question.options.forEach((option, index) => {
         const button = document.createElement('button');
-        button.className = 'answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors duration-200';
+        button.className = 'answer-btn w-full text-left p-2 md:p-3 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors duration-200 text-sm md:text-base break-words';
         button.innerHTML = `
             <span class="font-medium text-gray-800">${String.fromCharCode(65 + index)}) ${option}</span>
         `;
@@ -2603,23 +2620,24 @@ function selectAnswer(selectedIndex) {
 }
 
 function showFeedback(isCorrect, explanation, correctAnswer) {
-    const feedbackContainer = document.getElementById('feedback-container');
-    const feedbackContent = document.getElementById('feedback-content');
+     const feedbackContainer = document.getElementById('feedback-container');
+    feedbackContainer.className = 'hidden bg-white rounded-xl shadow-lg p-4 md:p-6 mb-4';
     
+    const feedbackContent = document.getElementById('feedback-content');
     feedbackContent.innerHTML = `
-        <div class="flex items-start space-x-4">
+        <div class="flex items-start space-x-3 md:space-x-4">
             <div class="flex-shrink-0">
                 ${isCorrect ? 
-                    '<div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>' :
-                    '<div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div>'
+                    '<div class="w-6 h-6 md:w-8 md:h-8 bg-green-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 md:w-5 md:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>' :
+                    '<div class="w-6 h-6 md:w-8 md:h-8 bg-red-100 rounded-full flex items-center justify-center"><svg class="w-4 h-4 md:w-5 md:h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div>'
                 }
             </div>
             <div class="flex-1">
-                <h4 class="font-bold text-lg ${isCorrect ? 'text-green-800' : 'text-red-800'} mb-2">
+                <h4 class="font-bold text-base md:text-lg ${isCorrect ? 'text-green-600' : 'text-red-600'} mb-1 md:mb-2">
                     ${isCorrect ? 'Correto!' : 'Incorreto!'}
                 </h4>
-                ${!isCorrect ? `<p class="text-gray-700 mb-2"><strong>Resposta correta:</strong> ${correctAnswer}</p>` : ''}
-                <p class="text-gray-700">${explanation}</p>
+                ${!isCorrect ? `<p class="text-sm md:text-base text-gray-700 mb-1 md:mb-2 break-words"><strong>Resposta correta:</strong> ${correctAnswer}</p>` : ''}
+                <p class="text-sm md:text-base text-gray-700 break-words">${explanation}</p>
             </div>
         </div>
     `;
@@ -2671,28 +2689,28 @@ function showQuizResults() {
         performanceColor = 'text-orange-600';
     }
     
-    resultsContent.innerHTML = `
-        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+       resultsContent.innerHTML = `
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+            <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
         </div>
-        <h3 class="text-3xl font-bold text-gray-800 mb-4">Quiz Concluído!</h3>
-        <div class="text-center mb-6">
-            <div class="text-6xl font-bold ${performanceColor} mb-2">${percentage}%</div>
-            <p class="text-xl text-gray-600 mb-2">Você acertou ${quizScore} de ${currentQuiz.length} perguntas</p>
-            <p class="text-lg ${performanceColor} font-medium">${performanceMessage}</p>
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">Quiz Concluído!</h3>
+        <div class="text-center mb-4 md:mb-6">
+            <div class="text-4xl md:text-6xl font-bold ${performanceColor} mb-1 md:mb-2">${percentage}%</div>
+            <p class="text-base md:text-xl text-gray-600 mb-1 md:mb-2">Você acertou ${quizScore} de ${currentQuiz.length} perguntas</p>
+            <p class="text-base md:text-lg ${performanceColor} font-medium break-words">${performanceMessage}</p>
         </div>
-        <div class="bg-gray-50 rounded-lg p-6">
-            <h4 class="font-bold text-gray-800 mb-4">Seu Progresso Geral</h4>
-            <div class="grid grid-cols-2 gap-4 text-center">
+        <div class="bg-gray-50 rounded-lg p-4 md:p-6">
+            <h4 class="font-bold text-gray-800 mb-3 md:mb-4 text-sm md:text-base">Seu Progresso Geral</h4>
+            <div class="grid grid-cols-2 gap-3 md:gap-4 text-center">
                 <div>
-                    <div class="text-2xl font-bold text-blue-600">${userProgress.quizScores.length}</div>
-                    <div class="text-sm text-gray-600">Quizzes Realizados</div>
+                    <div class="text-xl md:text-2xl font-bold text-blue-600">${userProgress.quizScores.length}</div>
+                    <div class="text-xs md:text-sm text-gray-600">Quizzes Realizados</div>
                 </div>
                 <div>
-                    <div class="text-2xl font-bold text-green-600">${userProgress.flashcardsStudied.length}</div>
-                    <div class="text-sm text-gray-600">Flashcards Estudados</div>
+                    <div class="text-xl md:text-2xl font-bold text-green-600">${userProgress.flashcardsStudied.length}</div>
+                    <div class="text-xs md:text-sm text-gray-600">Flashcards Estudados</div>
                 </div>
             </div>
         </div>
@@ -2709,37 +2727,37 @@ function showQuizReview() {
     const reviewContainer = document.createElement('div');
     reviewContainer.id = 'quiz-review';
     reviewContainer.className = 'max-w-4xl mx-auto';
-    reviewContainer.innerHTML = `
-        <div class="text-center mb-8">
-            <h3 class="text-3xl font-bold text-gray-800 mb-4">Revisão das Respostas</h3>
-            <p class="text-xl text-gray-600">Veja todas as perguntas e suas respostas</p>
+     reviewContainer.innerHTML = `
+        <div class="text-center mb-6 md:mb-8">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 md:mb-4 break-words">Revisão das Respostas</h3>
+            <p class="text-base md:text-xl text-gray-600 break-words">Veja todas as perguntas e suas respostas</p>
         </div>
         
-        <div class="space-y-6">
+        <div class="space-y-4 md:space-y-6">
             ${quizAnswers.map((answer, index) => `
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-start space-x-4">
+                <div class="bg-white rounded-xl shadow-lg p-4 md:p-6">
+                    <div class="flex items-start space-x-3 md:space-x-4">
                         <div class="flex-shrink-0">
-                            <div class="w-8 h-8 ${answer.isCorrect ? 'bg-green-100' : 'bg-red-100'} rounded-full flex items-center justify-center">
-                                <span class="text-lg font-bold ${answer.isCorrect ? 'text-green-600' : 'text-red-600'}">${index + 1}</span>
+                            <div class="w-6 h-6 md:w-8 md:h-8 ${answer.isCorrect ? 'bg-green-100' : 'bg-red-100'} rounded-full flex items-center justify-center">
+                                <span class="text-sm md:text-base font-bold ${answer.isCorrect ? 'text-green-600' : 'text-red-600'}">${index + 1}</span>
                             </div>
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-lg font-bold text-gray-800 mb-3">${answer.question}</h4>
-                            <div class="space-y-2 mb-4">
-                                <p class="text-gray-700">
+                            <h4 class="text-base md:text-lg font-bold text-gray-800 mb-2 md:mb-3 break-words">${answer.question}</h4>
+                            <div class="space-y-1 md:space-y-2 mb-3 md:mb-4">
+                                <p class="text-sm md:text-base text-gray-700 break-words">
                                     <span class="font-medium">Sua resposta:</span> 
                                     <span class="${answer.isCorrect ? 'text-green-600' : 'text-red-600'}">${answer.selectedAnswer}</span>
                                 </p>
                                 ${!answer.isCorrect ? `
-                                    <p class="text-gray-700">
+                                    <p class="text-sm md:text-base text-gray-700 break-words">
                                         <span class="font-medium">Resposta correta:</span> 
                                         <span class="text-green-600">${answer.correctAnswer}</span>
                                     </p>
                                 ` : ''}
                             </div>
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <p class="text-gray-700">${answer.explanation}</p>
+                            <div class="bg-gray-50 rounded-lg p-3 md:p-4">
+                                <p class="text-sm md:text-base text-gray-700 break-words">${answer.explanation}</p>
                             </div>
                         </div>
                     </div>
@@ -2747,13 +2765,12 @@ function showQuizReview() {
             `).join('')}
         </div>
         
-        <div class="text-center mt-8">
-            <button id="back-to-results-btn" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+        <div class="text-center mt-6 md:mt-8">
+            <button id="back-to-results-btn" class="bg-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm md:text-base">
                 Voltar aos Resultados
             </button>
         </div>
     `;
-    
     // Substituir o conteúdo do quiz
     const quizContainer = document.getElementById('quiz-container');
     quizContainer.innerHTML = '';
