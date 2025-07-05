@@ -2416,7 +2416,7 @@ function renderFlashcards() {
     cardDiv.className = 'flashcard-container col-span-full w-full px-2'; // Adicionado px-2 para espaçamento
     
     const categoryClass = card.category === 'conhecimentos-gerais' ? 
-        'bg-blue-600 text-white' : 'bg-red-600 text-white';
+        'bg-red-600 text-white' : 'bg-red-600 text-white';
     
     cardDiv.innerHTML = `
         <div class="flashcard bg-white rounded-xl shadow-lg p-4 md:p-6 cursor-pointer transform transition-transform duration-300 hover:scale-105 mx-auto w-full max-w-md" data-id="${card.id}">
@@ -2424,7 +2424,7 @@ function renderFlashcards() {
                 <div class="flashcard-front">
                     <div class="flex items-center justify-between mb-3">
                         <span class="px-2 py-1 ${categoryClass} rounded-full text-xs md:text-sm font-medium">
-                            ${card.category === 'conhecimentos-gerais' ? 'Gerais' : 'Específicos'}
+                            ${card.category === 'conhecimentos-gerais' ? 'Conhecimento Gerais' : 'Conhecimento Específicos'}
                         </span>
                         <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
