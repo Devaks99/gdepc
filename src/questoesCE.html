@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="../img/Logo Guia concurso.png" type="image/x-icon">
+    <title>Questões Específicas - Guia Concurso</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../src/css/dark-theme.css" rel="stylesheet">
+    <style>
+        /* Estilos específicos para questões específicas */
+        .subject-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .subject-card.cts {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .subject-card.ctbs {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .subject-card.gestao-projetos {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .subject-card.metodologia {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .subject-card.tics-dados {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .subject-card.politicas-cti {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #374151 !important;
+        }
+
+        .subject-card.lgpd {
+        background: linear-gradient(135deg, #0ea5e9 0%, #0d9488 100%);
+    }
+    
+    .subject-card.governo-digital {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    }
+    
+    .subject-card.seguranca {
+        background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    }
+    
+    .subject-card.saude-publica {
+        background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+    }
+    
+    .subject-card.outros {
+        background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%);
+    }
+
+        .quiz-option {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .quiz-option:hover {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        
+        .quiz-option.selected {
+            border-color: #3b82f6;
+            background-color: #dbeafe;
+        }
+        
+        .quiz-option.correct {
+            border-color: #10b981;
+            background-color: #d1fae5;
+        }
+        
+        .quiz-option.incorrect {
+            border-color: #ef4444;
+            background-color: #fee2e2;
+        }
+        
+        .quiz-option.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .progress-bar {
+            transition: width 0.3s ease;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">GC</span>
+                        </div>
+                        <h1 class="text-xl font-bold">Guia Concurso</h1>
+                    </a>
+                </div>
+                 <button id="theme-toggle" class="p-2 rounded-lg bg-blue-700 hover:bg-blue-600 transition-colors duration-200">
+                <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+            </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-6xl flex-grow">
+
+    <!-- Botão Voltar -->
+    <div class="mb-8">
+        <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+            ← Voltar ao Início
+        </a>
+       </div>
+
+        <!-- Tela de Seleção de Assunto -->
+        <div id="subject-selection" class="text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Questões Conhecimentos Específicos</h1>
+            <h2 class="text-xl text-gray-600 mb-8">Selecione o assunto</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Resolver por assunto...</h3>
+                <p class="text-gray-600 mb-8">Escolha uma área específica para focar seus estudos</p>
+                
+                <!-- Grid de Assuntos -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="subject-card cts text-white rounded-xl p-6 cursor-pointer" data-subject="cts">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">CTS</h4>
+                            <p class="text-sm opacity-90">Ciência, Tecnologia e Sociedade</p>
+                        </div>
+                    </div>
+
+                    <div class="subject-card ctbs text-white rounded-xl p-6 cursor-pointer" data-subject="ctbs">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">CT&BS</h4>
+                            <p class="text-sm opacity-90">Ciência, Tecnologia e Biosegurança</p>
+                        </div>
+                    </div>
+
+                    <div class="subject-card gestao-projetos text-white rounded-xl p-6 cursor-pointer" data-subject="gestao-projetos">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19v2h-1.5v17h-11V4H5V2h1.5C7.33 2 8 2.67 8 3.5S7.33 5 6.5 5H8v14h8V5h1.5z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Gestão de Projetos</h4>
+                            <p class="text-sm opacity-90">Metodologias e Ferramentas</p>
+                        </div>
+                    </div>
+
+                    <div class="subject-card metodologia text-white rounded-xl p-6 cursor-pointer" data-subject="metodologia">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Metodologia</h4>
+                            <p class="text-sm opacity-90">Metodologia Científica</p>
+                        </div>
+                    </div>
+
+                    <div class="subject-card tics-dados text-white rounded-xl p-6 cursor-pointer" data-subject="tics-dados">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">TICs e Dados</h4>
+                            <p class="text-sm opacity-90">Tecnologias da Informação</p>
+                        </div>
+                    </div>
+
+                    <div class="subject-card politicas-cti rounded-xl p-6 cursor-pointer" data-subject="politicas-cti">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Políticas CT&I</h4>
+                            <p class="text-sm opacity-90">Políticas de Ciência e Tecnologia</p>
+                        </div>
+                    </div>
+                    <!-- Dentro da div com class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" -->
+<!-- Adicione esses novos cartões APÓS os existentes -->
+
+<!-- Cartão para LGPD -->
+<div class="subject-card lgpd text-white rounded-xl p-6 cursor-pointer" data-subject="lgpd">
+    <div class="text-center">
+        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">LGPD</h4>
+        <p class="text-sm opacity-90">Proteção de Dados</p>
+    </div>
+</div>
+
+<!-- Cartão para Governo Digital -->
+<div class="subject-card governo-digital text-white rounded-xl p-6 cursor-pointer" data-subject="governo-digital">
+    <div class="text-center">
+        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 11.01L3 11v2h18zM3 16h12v2H3zM21 6H3v2.01L21 8z"/>
+            </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Governo Digital</h4>
+        <p class="text-sm opacity-90">Tecnologia no Setor Público</p>
+    </div>
+</div>
+
+<!-- Cartão para Segurança da Informação -->
+<div class="subject-card seguranca text-white rounded-xl p-6 cursor-pointer" data-subject="seguranca">
+    <div class="text-center">
+        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+            </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Segurança</h4>
+        <p class="text-sm opacity-90">Segurança da Informação</p>
+    </div>
+</div>
+
+<!-- Cartão para Saúde Pública -->
+<div class="subject-card saude-publica text-white rounded-xl p-6 cursor-pointer" data-subject="saude-publica">
+    <div class="text-center">
+        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 19h16v-7H4v7zM18.1 3.1L15.3 6l2.8 2.8 1.4-1.4L16.7 6l2.8-2.8-1.4-1.4zM11 9h2v2h-2V9zM7 9h2v2H7V9zm8 4h-2v-2h2v2zm4-4h-2v-2h2v2zm-8 0h-2v-2h2v2zm-4 0H7v-2h2v2z" opacity=".3"/><path d="M20 9v11H4V8h10.1c.15-.74.46-1.42.9-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9h-2zm0 10H4v-7h16v7z"/><path d="M18.1 3.1L15.3 6l2.8 2.8 1.4-1.4L16.7 6l2.8-2.8zM11 9h2v2h-2zm4 0h2v2h-2zm-8 0h2v2H7zm4 4h2v2h-2zm4 0h2v2h-2zm-8 0h2v2H7z"/>
+            </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Saúde Pública</h4>
+        <p class="text-sm opacity-90">Sistemas de Saúde</p>
+    </div>
+</div>
+
+<!-- Cartão para Outros Temas -->
+<div class="subject-card outros text-white rounded-xl p-6 cursor-pointer" data-subject="outros">
+    <div class="text-center">
+        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+            </svg>
+        </div>
+        <h4 class="text-xl font-bold mb-2">Outros Temas</h4>
+        <p class="text-sm opacity-90">Diversos</p>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="quiz-container" class="hidden">
+            <!-- Breadcrumb -->
+            <div class="mb-6">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <button onclick="showSubjectSelection()" class="text-blue-600 hover:text-blue-800">
+                                Questões Específicas
+                            </button>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span id="current-subject" class="ml-1 text-gray-500 md:ml-2">Assunto</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- Barra de Progresso -->
+            <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-medium text-gray-600">Progresso</span>
+                    <span id="progress-text" class="text-sm font-medium text-gray-600">1 de 10</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="progress-bar" class="progress-bar bg-blue-600 h-3 rounded-full" style="width: 10%"></div>
+                </div>
+            </div>
+
+            <!-- Questão -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-6 fade-in">
+                <div class="flex justify-between items-start mb-6">
+                    <span id="question-category" class="category-tag conhecimentos-especificos px-3 py-1 rounded-full text-sm font-medium">
+                        Conhecimentos Específicos
+                    </span>
+                    <span id="question-number" class="text-gray-500 font-medium">Questão 1</span>
+                </div>
+                
+                <h3 id="question-text" class="text-xl font-bold text-gray-800 mb-6">
+                    Carregando questão...
+                </h3>
+                
+                <div id="answers-container" class="space-y-3">
+                    <!-- Opções de resposta serão inseridas aqui -->
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div id="feedback-container" class="hidden bg-white rounded-xl shadow-lg p-6 mb-6">
+                <div id="feedback-content">
+                    <!-- Feedback será inserido aqui -->
+                </div>
+            </div>
+
+            <!-- Botões de Navegação -->
+            <div class="flex justify-between items-center">
+                <button id="prev-question" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    ← Anterior
+                </button>
+                
+                <button id="next-question" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    Próxima →
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela de Resultados -->
+        <div id="results-container" class="hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Quiz Concluído!</h2>
+                    <p id="subject-result" class="text-xl text-gray-600 mb-4">Assunto: CTS</p>
+                </div>
+
+                <!-- Estatísticas -->
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <div class="text-3xl font-bold text-green-600 mb-2" id="correct-count">0</div>
+                        <div class="text-green-700 font-medium">Acertos</div>
+                        <div class="text-green-600 text-sm" id="correct-percentage">0%</div>
+                    </div>
+                    <div class="bg-red-50 rounded-lg p-6">
+                        <div class="text-3xl font-bold text-red-600 mb-2" id="incorrect-count">0</div>
+                        <div class="text-red-700 font-medium">Erros</div>
+                        <div class="text-red-600 text-sm" id="incorrect-percentage">0%</div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <div class="text-3xl font-bold text-blue-600 mb-2" id="total-questions">0</div>
+                        <div class="text-blue-700 font-medium">Total</div>
+                        <div class="text-blue-600 text-sm">Questões</div>
+                    </div>
+                </div>
+
+                <!-- Recomendações -->
+                <div id="recommendations" class="bg-gray-50 rounded-lg p-6 mb-8 text-left">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Recomendações de Estudo</h3>
+                    <div id="recommendations-content">
+                        <!-- Recomendações serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="showSubjectSelection()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200">
+                        Escolher Outro Assunto
+                    </button>
+                    <a href="../index.html" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 text-center">
+                        Voltar ao Início
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-footer text-footer py-8  mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-footer">© 2025 Guia Concurso. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    // Função para alternar o tema
+    function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Atualizar o ícone
+        const themeIcon = document.getElementById('theme-icon');
+        if (newTheme === 'dark') {
+            themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        } else {
+            themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+        }
+    }
+
+    // Verificar tema ao carregar
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        const themeIcon = document.getElementById('theme-icon');
+        if (savedTheme === 'dark') {
+            themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        }
+        
+        // Adicionar evento ao botão
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    });
+</script>
+
+    <script src="js/quizEspecifico.js"></script>
+</body>
+</html>
+

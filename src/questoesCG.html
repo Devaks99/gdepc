@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="../img/Logo Guia concurso.png" type="image/x-icon">
+    <title>Questões Gerais - Guia Concurso</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../src/css/dark-theme.css" rel="stylesheet">
+    <style>
+        /* Estilos específicos para o quiz */
+        .quiz-option {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .quiz-option:hover {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        
+        .quiz-option.selected {
+            border-color: #3b82f6;
+            background-color: #dbeafe;
+        }
+        
+        .quiz-option.correct {
+            border-color: #10b981;
+            background-color: #d1fae5;
+        }
+        
+        .quiz-option.incorrect {
+            border-color: #ef4444;
+            background-color: #fee2e2;
+        }
+        
+        .quiz-option.disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .progress-bar {
+            transition: width 0.3s ease;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">GC</span>
+                        </div>
+                        <h1 class="text-xl font-bold">Guia Concurso</h1>
+                    </a>
+                </div>
+                 <button id="theme-toggle" class="p-2 rounded-lg bg-blue-700 hover:bg-blue-600 transition-colors duration-200">
+                <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+            </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        
+        <!-- Botão Voltar -->
+        <div class="mb-8">
+        <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+            ← Voltar ao Início
+        </a>
+       </div>
+
+        <!-- Tela de Seleção -->
+        <div id="quiz-selection" class="text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Quiz Interativo</h1>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Pronto para o desafio?</h3>
+                <p class="text-gray-600 mb-8">Teste seus conhecimentos com questões de conhecimentos gerais do CNU 2025</p>
+                
+                <!-- Opções de quantidade de questões -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <button class="quiz-size-btn bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold" data-size="20">
+                        20 Questões
+                    </button>
+                    <button class="quiz-size-btn bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-200 font-semibold" data-size="50">
+                        50 Questões
+                    </button>
+                    <button class="quiz-size-btn bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-200 font-semibold" data-size="100">
+                        100 Questões
+                    </button>
+                    <button class="quiz-size-btn bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-200 font-semibold" data-size="150">
+                        150 Questões
+                    </button>
+                </div>
+                
+                <button id="start-quiz-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 pulse-animation">
+                    Iniciar Quiz
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela do Quiz -->
+        <div id="quiz-container" class="hidden">
+            <!-- Barra de Progresso -->
+            <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-medium text-gray-600">Progresso</span>
+                    <span id="progress-text" class="text-sm font-medium text-gray-600">1 de 20</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div id="progress-bar" class="progress-bar bg-blue-600 h-3 rounded-full" style="width: 5%"></div>
+                </div>
+            </div>
+
+            <!-- Questão -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-6 fade-in">
+                <div class="flex justify-between items-start mb-6">
+                    <span id="question-category" class="category-tag conhecimentos-gerais px-3 py-1 rounded-full text-sm font-medium ">
+                        Conhecimentos Gerais
+                    </span>
+                    <span id="question-number" class="text-gray-500 font-medium">Questão 1</span>
+                </div>
+                
+                <h3 id="question-text" class="text-xl font-bold text-gray-800 mb-6">
+                    Carregando questão...
+                </h3>
+                
+                <div id="answers-container" class="space-y-3">
+                    <!-- Opções de resposta serão inseridas aqui -->
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div id="feedback-container" class="hidden bg-white rounded-xl shadow-lg p-6 mb-6">
+                <div id="feedback-content">
+                    <!-- Feedback será inserido aqui -->
+                </div>
+            </div>
+
+            <!-- Botões de Navegação -->
+            <div class="flex justify-between items-center">
+                <button id="prev-question" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    ← Anterior
+                </button>
+                
+                <button id="next-question" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    Próxima →
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela de Resultados -->
+        <div id="results-container" class="hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Quiz Concluído!</h2>
+                </div>
+
+                <!-- Estatísticas -->
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <div class="text-3xl font-bold text-green-600 mb-2" id="correct-count">0</div>
+                        <div class="text-green-700 font-medium">Acertos</div>
+                        <div class="text-green-600 text-sm" id="correct-percentage">0%</div>
+                    </div>
+                    <div class="bg-red-50 rounded-lg p-6">
+                        <div class="text-3xl font-bold text-red-600 mb-2" id="incorrect-count">0</div>
+                        <div class="text-red-700 font-medium">Erros</div>
+                        <div class="text-red-600 text-sm" id="incorrect-percentage">0%</div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <div class="text-3xl font-bold text-blue-600 mb-2" id="total-questions">0</div>
+                        <div class="text-blue-700 font-medium">Total</div>
+                        <div class="text-blue-600 text-sm">Questões</div>
+                    </div>
+                </div>
+
+                <!-- Recomendações -->
+                <div id="recommendations" class="bg-gray-50 rounded-lg p-6 mb-8 text-left">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Recomendações de Estudo</h3>
+                    <div id="recommendations-content">
+                        <!-- Recomendações serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="location.reload()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200">
+                        Fazer Novo Quiz
+                    </button>
+                    <a href="../index.html" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 text-center">
+                        Voltar ao Início
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-footer text-footer py-8  mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-footer">© 2025 Guia Concurso. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    // Função para alternar o tema
+    function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Atualizar o ícone
+        const themeIcon = document.getElementById('theme-icon');
+        if (newTheme === 'dark') {
+            themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        } else {
+            themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+        }
+    }
+
+    // Verificar tema ao carregar
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        const themeIcon = document.getElementById('theme-icon');
+        if (savedTheme === 'dark') {
+            themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        }
+        
+        // Adicionar evento ao botão
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    });
+</script>
+
+    <script src="js/quizGeral.js"></script>
+</body>
+</html>
+

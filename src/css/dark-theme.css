@@ -1,639 +1,167 @@
-.dark {
-    background-color: #0f172a !important;
-    color: #dbd6d6;
+/* Dark Theme Styles */
+[data-theme="dark"] {
+    background-color: #0f172a;
+    color: #e2e8f0;
 }
 
-.text-logo {
-    background-color: #ffffff;
-    padding: 1px 3px;
-    border-radius: 4px;
-    color: #559fff;
-}
-
-html.dark ::-webkit-scrollbar-track {
-  background: #1e293b;
-}
-
-html.dark ::-webkit-scrollbar-thumb {
-  background-color: #3b82f6;
-  border: 2px solid #1e293b;
-}
-
-/* Backgrounds principais */
-.dark .text-logo {
-    background-color: #ffffff;
-    padding: 1px 3px;
-    border-radius: 4px;
-    color: #559fff;
-}
-.icon {
-  width: 1rem;
-  height: 1rem;
-  color: #dc2626; /* red-600 no modo claro */
-}
-
-.dark .icon{
-    color: white;
-}
-
-
-.dark .bg-gray-50 {
+[data-theme="dark"] .bg-gray-50 {
     background-color: #0f172a !important;
 }
 
-.dark .bg-white {
-    background-color: #474f862f !important;
-    color: #f1f5f9 !important;
-}
-
-.dark .bg-gray-100 {
-    background-color: #334155 !important;
-    color: #c4d0dd !important;
-}
-
-.dark .bg-gray-200 {
-    background-color: #787b80 !important;
-    color: #f1f5f9 !important;
-}
-
-.dark .bg-gray-800 {
-    background-color: #0f172a !important;
-}
-
-/* Cores de texto*/
-.dark .text-gray-800 {
-    color: #dbdbdb !important;
-}
-
-.dark .text-gray-700 {
+[data-theme="dark"] .bg-white {
+    background-color: #1e293b !important;
     color: #e2e8f0 !important;
 }
 
-.dark .text-gray-600 {
-    color: #d1d5dbc7 !important;
+[data-theme="dark"] .text-gray-800 {
+    color: #e2e8f0 !important;
 }
 
-.dark .text-gray-500 {
+[data-theme="dark"] .text-gray-600 {
     color: #94a3b8 !important;
 }
 
-.dark .text-gray-400 {
-    color: #2781ff !important;
+[data-theme="dark"] .text-gray-700 {
+    color: #cbd5e1 !important;
 }
 
-.dark .text-white1 {
-    color: #eeeeee;
+[data-theme="dark"] .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Cores específicas para elementos importantes */
-.dark .text-blue-600 {
-    color: #60a5fa !important;
+[data-theme="dark"] .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
 }
 
-.dark .text-blue-800 {
-    color: #93c5fd !important;
-}
-
-.dark .text-green-600 {
-    color: #00a769 !important;
-}
-
-.dark .text-purple-600 {
-    color: #a78bfa !important;
-}
-
-.dark .text-red-100 {
-color: #ff0b0be8 !important;
-}
-
-/* Backgrounds coloridos com melhor contraste */
-.dark .bg-blue-100 {
-    background-color: #133eccea !important;
-    color: #dbeafe !important;
-}
-
-.dark .bg-red-100 {
-    color: #dbeafe;
-    background-color: #ff3333b9;
-}
-
-.dark .bg-red-500 {
-    background-color: #ff2323ad;
-}
-
-.dark .bg-green-200 {
-    color: #dbeafe;
-    background-color: rgba(43, 190, 55, 0.726);
-}
-
-.dark .bg-green-100 {
-    background-color: #135540 !important;
-    color: #d1fae5 !important;
-}
-
-.dark .bg-purple-100 {
-    background-color: #4b278a !important;
-    color: #e9d5ff !important;
-}
-
-.dark .bg-blue-600 {
-    background-color: #2563eb !important;
-}
-
-.dark .bg-blue-200 {
-    background-color: #52a0ff;
-}
-
-.dark .bg-green-600 {
-    background-color: #16a34a !important;
-}
-
-.dark .bg-footer {
-    color: #6eafff;
-    background-color: #474f863a;
-}
-
-.dark .text-footer {
-    color: #559fff;
-}
-
-.dark .feedback-incorrect .question-number {
-    color: #ffffff !important; /* Texto branco para melhor contraste */
-    font-weight: bold;
-}
-
-/* Hovers melhorados */
-.dark .hover\:bg-blue-200:hover {
-    background-color: #265bec !important;
-}
-
-.dark .hover\:bg-gray-300:hover {
-    background-color: #334155 !important;
-}
-
-.dark .hover\:bg-blue-50:hover {
-    background-color: #244eda !important;
-}
-
-.dark .hover\:bg-blue-700:hover {
-    background-color: #124ff5 !important;
-}
-
-.dark .hover\:bg-green-700:hover {
-    background-color: #1b7a3e !important;
-}
-
-.dark .hover\:bg-gray-700:hover {
-    background-color: #556680 !important;
-}
-
-/* Bordas */
-.dark .border-gray-200 {
-    border-color: #475569 !important;
-}
-
-.dark .border-blue-500 {
-    border-color: #2c7dff !important;
-}
-
-.dark .hover\:border-blue-300:hover {
-    border-color: #52a0ff !important;
-}
-
-/* Sombras melhoradas para dark mode */
-.dark .shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-}
-
-.dark .shadow-xl {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Transições suaves */
-* {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Estilos para títulos destacados */
-.title-highlight {
-    background: linear-gradient(135deg, #3B82F6, #3451af);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
-}
-
-.title-secondary {
-    color: #086648;
-    text-shadow: 0 1px 2px rgba(5, 150, 105, 0.2);
-}
-
-.dark .title-secondary {
-    color: #10b981ce;
-}
-
-.title-tertiary {
-    color: #a71a1ae5;
-    text-shadow: 0 1px 2px rgba(220, 38, 38, 0.2);
-}
-
-.dark .title-tertiary {
-    color: #ff7b7bda;
-}
-
-.title-quaternary {
-    color: #6b30d1e7;
-    text-shadow: 0 1px 2px rgba(124, 58, 237, 0.2);
-}
-
-.dark .title-quaternary {
-    color: #A78BFA;
-}
-
-.title-main {
-    color: #1E40AF;
-    text-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
-}
-
-.dark .title-main {
-    color: #60A5FA;
-}
-
-/* Melhorias para responsividade - Mobile First */
-@media (max-width: 768px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #theme-toggle{
-      display: none;
-    }
-    
-    /* Centralização e tamanhos de fonte ajustados */
-    .text-5xl {
-        font-size: 2.5rem !important;
-        line-height: 1.2;
-        text-align: center;
-    }
-    
-    .text-6xl {
-        font-size: 3rem !important;
-        line-height: 1.1;
-        text-align: center;
-    }
-    
-    .text-4xl {
-        font-size: 2rem !important;
-        line-height: 1.3;
-        text-align: center;
-    }
-    
-    .text-2xl {
-        font-size: 1.5rem !important;
-        line-height: 1.4;
-        text-align: center;
-    }
-    
-    /* Espaçamentos ajustados */
-    .py-16 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    
-    .p-8 {
-        padding: 1.5rem !important;
-    }
-    
-    .px-8 {
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-    }
-    
-    .py-4 {
-        padding-top: 0.75rem !important;
-        padding-bottom: 0.75rem !important;
-    }
-    
-    /* Ícones e elementos visuais */
-    .w-16.h-16 {
-        width: 3rem !important;
-        height: 3rem !important;
-        margin: 0 auto;
-    }
-    
-    .w-20.h-20 {
-        width: 3.5rem !important;
-        height: 3.5rem !important;
-        margin: 0 auto;
-    }
-    
-    /* Melhor espaçamento para cards e seções */
-    .grid {
-        gap: 1rem !important;
-    }
-    
-    .space-y-4 > * + * {
-        margin-top: 1rem !important;
-    }
-    
-    .space-y-6 > * + * {
-        margin-top: 1.5rem !important;
-    }
-    
-    /* Centralização de conteúdo */
-    .flex {
-        /* justify-content: center; */
-        align-items: center;
-    }
-    
-    .flex-col {
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-xl {
-        font-size: 1.125rem !important;
-        line-height: 1.5;
-        text-align: center;
-    }
-    
-    .text-lg {
-        font-size: 1rem !important;
-        line-height: 1.5;
-        text-align: center;
-    }
-    
-    .py-16 {
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
-    }
-    
-    .p-8 {
-        padding: 1rem !important;
-    }
-    
-    .px-4 {
-        padding-left: 0.75rem !important;
-        padding-right: 0.75rem !important;
-    }
-    
-    /* Melhor espaçamento para telas muito pequenas */
-    .space-y-2 > * + * {
-        margin-top: 0.5rem !important;
-    }
-    
-    .space-y-3 > * + * {
-        margin-top: 0.75rem !important;
-    }
-    
-    /* Botões mais tocáveis */
-    .btn {
-        min-height: 44px !important;
-        padding: 0.75rem 1rem !important;
-    }
-}
-
-/* Melhorias específicas para flashcards */
-.dark .filter-btn {
-    border: 1px solid #475569;
-}
-
-.dark .filter-btn.active {
-    background-color: #2563eb !important;
-    color: #ffffff !important;
-    border-color: #2563eb !important;
-}
-
-.dark .filter-btn:not(.active) {
-    background-color: #364458 !important;
-    color: #e2e8f0 !important;
-}
-
-.dark .filter-btn:not(.active):hover {
-    background-color: #334155 !important;
-    color: #f1f5f9 !important;
-}
-
-/* Estilo para tags de categoria nos flashcards */
-.dark .category-tag.conhecimentos-gerais {
-    background-color: #1e40af !important;
-    color: #ffffff !important;
-    border: 1px solid #3b82f6 !important;
-}
-
-.dark .category-tag.conhecimentos-especificos {
-    background-color: #991b1b !important;
-    color: #ffffff !important;
-    border: 1px solid #dc2626 !important;
-}
-
-/* Melhorias para quiz */
-.dark .quiz-size-btn {
-    background-color: #1e40afb0 !important;
-    color: #dbeafe !important;
-    border: 1px solid #2563eb;
-}
-
-.dark .quiz-size-btn:hover {
-    background-color: #386cfcef !important;
-    color: #ffffff !important;
-}
-
-/* Melhorias para o progresso */
-.dark #progress-bar {
-    background-color: #3b82f6 !important;
-}
-
-/* Melhorias para feedback - CORREÇÃO PRINCIPAL */
-.dark #feedback-container {
-    background-color: #1e293b !important;
-    border: 1px solid #475569 !important;
-    color: #f1f5f9 !important;
-}
-
-.dark .feedback-correct {
-    background-color: #065f46 !important;
-    color: #d1fae5 !important;
-    border-left: 4px solid #10b981 !important;
-    padding: 12px;
-    margin-bottom: 8px;
-    border-radius: 4px;
-}
-
-.dark .feedback-incorrect {
-    background-color: #7f1d1d !important;
-    color: #fee2e2 !important;
-    border-left: 4px solid #ef4444 !important;
-    padding: 12px;
-    margin-bottom: 8px;
-    border-radius: 4px;
-}
-
-.dark .feedback-explanation {
-    background-color: #1e293b !important;
-    border: 1px solid #334155 !important;
-    padding: 12px;
-    border-radius: 4px;
-    margin-top: 12px;
-}
-
-/* Melhorias para botões disabled */
-.dark .disabled\:opacity-50:disabled {
-    opacity: 0.5;
-    background-color: #64748b !important;
-}
-
-/* Melhorias para navegação mobile */
-.dark #mobile-menu {
-    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%) !important;
-}
-
-/* Melhorias para o header fixo */
-.dark header {
-    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%) !important;
-}
-
-/* Ajustes específicos para categorias nos flashcards */
-.category-tag {
-    background-color: #f3f4f6;
-    color: #374151;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    border: 1px solid #d1d5db;
-}
-
-.dark .category-tag {
+[data-theme="dark"] .bg-gray-200 {
     background-color: #374151 !important;
     color: #e2e8f0 !important;
-    border: 1px solid #475569;
 }
 
-/* Ajustes para melhor legibilidade */
-.dark p, .dark li, .dark span {
-    line-height: 1.6;
+[data-theme="dark"] .bg-gray-300 {
+    background-color: #4b5563 !important;
 }
 
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-    line-height: 1.3;
+[data-theme="dark"] .hover\:bg-gray-300:hover {
+    background-color: #4b5563 !important;
 }
 
-/* Estilo para títulos na seção Sobre */
-.dark #about h3 {
+[data-theme="dark"] .bg-blue-100 {
+    background-color: #1e3a8a !important;
+}
+
+[data-theme="dark"] .bg-green-100 {
+    background-color: #14532d !important;
+}
+
+[data-theme="dark"] .bg-purple-100 {
+    background-color: #581c87 !important;
+}
+
+[data-theme="dark"] .border-blue-600 {
+    border-color: #3b82f6 !important;
+}
+
+[data-theme="dark"] .border-green-600 {
+    border-color: #16a34a !important;
+}
+
+/* Footer dark mode */
+[data-theme="dark"] .bg-footer {
+    background-color: #1e293b !important;
+}
+
+[data-theme="dark"] .text-footer {
+    color: #94a3b8 !important;
+}
+
+/* Feedback dark mode */
+[data-theme="dark"] .feedback-correct {
+    background-color: #064e3b !important;
+    color: #a7f3d0 !important;
+    border-left: 4px solid #10b981 !important;
+}
+
+[data-theme="dark"] .feedback-incorrect {
+    background-color: #7f1d1d !important;
+    color: #fecaca !important;
+    border-left: 4px solid #ef4444 !important;
+}
+
+/* Títulos seção Sobre - Dark mode */
+[data-theme="dark"] #about h3 {
     color: #60a5fa !important;
-    border-bottom: 2px solid #3b82f6;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+    border-bottom: 2px solid #3b82f6 !important;
 }
 
-.dark #about h2 {
-    color: #dddddd !important;
+[data-theme="dark"] #about h2 {
+    color: #e2e8f0 !important;
 }
 
-/* Garantir que o dark mode sobrescreva os estilos do light mode */
-.dark .bg-footer {
-    background-color: #474f863a !important;
+/* Flashcard styles dark mode */
+[data-theme="dark"] .flashcard {
+    background-color: #1e293b !important;
+    border: 1px solid #374151 !important;
 }
 
-.dark .text-footer {
-    color: #559fff !important;
+[data-theme="dark"] .flashcard:hover {
+    background-color: #334155 !important;
 }
 
-/* Estilo para o número da questão incorreta */
-.dark .feedback-incorrect .question-number {
+/* Quiz styles dark mode */
+[data-theme="dark"] .quiz-option {
+    background-color: #1e293b !important;
+    border: 1px solid #374151 !important;
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .quiz-option:hover {
+    background-color: #334155 !important;
+}
+
+[data-theme="dark"] .quiz-option.selected {
+    background-color: #1e40af !important;
+    border-color: #3b82f6 !important;
+}
+
+[data-theme="dark"] .quiz-option.correct {
+    background-color: #065f46 !important;
+    border-color: #10b981 !important;
+}
+
+[data-theme="dark"] .quiz-option.incorrect {
+    background-color: #7f1d1d !important;
+    border-color: #ef4444 !important;
+}
+
+/* Category tags dark mode */
+[data-theme="dark"] .category-tag.conhecimentos-gerais {
+    background-color: #0c7e1f !important;
     color: #ffffff !important;
-    font-weight: bold;
 }
 
-/* Melhorias adicionais para responsividade e centralização */
-@media (max-width: 768px) {
-    /* Centralização melhorada para seções */
-    .section-center {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* Cards e containers centralizados */
-    .card, .container, .main-content {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    /* Melhor espaçamento para listas */
-    .list-container {
-        padding: 1rem;
-        margin: 0 auto;
-    }
-    
-    /* Botões responsivos */
-    .btn-group {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-    }
-    
-    .btn-group .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    /* Formulários centralizados */
-    .form-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 1rem;
-    }
-    
-    .form-container input,
-    .form-container select,
-    .form-container textarea {
-        width: 100%;
-        text-align: center;
-    }
+[data-theme="dark"] .category-tag.conhecimentos-especificos {
+    background-color: #b91c1c !important;
+    color: #ffffff !important;
 }
 
-@media (max-width: 640px) {
-    .dark .flashcard {
-        background-color: #1e293b !important;
-    }
-    
-    .dark #answers-container button {
-        background-color: #334155 !important;
-    }
-    
-    .dark .bg-white.rounded-xl.shadow-lg {
-        background-color: #1e293b !important;
-    }
+/* Scrollbar dark mode */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #1e293b !important;
 }
 
-/* Melhorias específicas para tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-    .container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-    
-    .grid-cols-2 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .text-4xl {
-        font-size: 2.25rem !important;
-    }
-    
-    .text-2xl {
-        font-size: 1.75rem !important;
-    }
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background-color: #3b82f6 !important;
+    border: 2px solid #1e293b !important;
 }
+
+/* Logo dark mode */
+[data-theme="dark"] .text-logo {
+    background-color: #1e293b !important;
+    color: #60a5fa !important;
+}
+
+[data-theme="dark"] .bg-logo {
+    background-color: #1e293b !important;
+}
+

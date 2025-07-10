@@ -1,25 +1,422 @@
-{
-  "flashcards": [
+[
     {
-      "id": 1,
-      "category": "conhecimentos-gerais",
-      "title": "Estado Democrático de Direito",
-      "question": "O que caracteriza um Estado Democrático de Direito?",
-      "answer": "É um sistema político que combina democracia e estado de direito..."
-    }
-  ],
-  "quiz": [
+        "id": 1,
+        "category": "conhecimentos-gerais",
+        "question": "O que é o Estado Democrático de Direito?",
+        "answer": "É um sistema político onde o poder emana do povo e é exercido através de representantes eleitos, com respeito às leis e aos direitos fundamentais dos cidadãos. Caracteriza-se pela separação dos poderes, supremacia da Constituição e garantia dos direitos humanos."
+    },
     {
-      "id": 1,
-      "question": "Qual princípio da administração pública determina que o administrador deve agir sempre conforme a lei?",
-      "options": [
-        "Impessoalidade",
-        "Legalidade",
-        "Moralidade",
-        "Publicidade"
-      ],
-      "correct": 1,
-      "explanation": "O princípio da legalidade estabelece que..."
+        "id": 2,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os princípios da Administração Pública?",
+        "answer": "Os princípios constitucionais da Administração Pública são: Legalidade (agir conforme a lei), Impessoalidade (tratamento igual), Moralidade (ética), Publicidade (transparência) e Eficiência (otimização de recursos) - LIMPE."
+    },
+    {
+        "id": 3,
+        "category": "conhecimentos-gerais",
+        "question": "O que é Ética no Serviço Público?",
+        "answer": "É o conjunto de princípios morais que devem orientar a conduta dos servidores públicos, priorizando o interesse público sobre o privado, com probidade, honestidade, transparência e responsabilidade social."
+    },
+    {
+        "id": 4,
+        "category": "conhecimentos-gerais",
+        "question": "O que são Políticas Públicas?",
+        "answer": "São ações e programas desenvolvidos pelo Estado para resolver problemas públicos e atender às necessidades da sociedade, envolvendo planejamento, implementação, monitoramento e avaliação de resultados."
+    },
+    {
+        "id": 5,
+        "category": "conhecimentos-gerais",
+        "question": "O que é Diversidade e Inclusão no contexto público?",
+        "answer": "Refere-se à promoção da igualdade de oportunidades e respeito às diferenças (gênero, raça, orientação sexual, deficiência), garantindo participação plena de todos os grupos sociais na administração pública."
+    },
+    {
+        "id": 6,
+        "category": "conhecimentos-especificos",
+        "question": "O que é Ciência, Tecnologia e Sociedade (CTS)?",
+        "answer": "É um campo interdisciplinar que estuda as relações entre ciência, tecnologia e sociedade, analisando como elas se influenciam mutuamente e os impactos sociais, econômicos e ambientais do desenvolvimento científico-tecnológico."
+    },
+    {
+        "id": 7,
+        "category": "conhecimentos-especificos",
+        "question": "O que são Políticas de CT&I?",
+        "answer": "São políticas públicas voltadas para Ciência, Tecnologia e Inovação, que visam promover o desenvolvimento científico e tecnológico do país através de investimentos, incentivos e marcos regulatórios adequados."
+    },
+    {
+        "id": 8,
+        "category": "conhecimentos-especificos",
+        "question": "O que é Gestão de Projetos?",
+        "answer": "É a aplicação de conhecimentos, habilidades, ferramentas e técnicas para executar projetos de forma eficaz e eficiente, envolvendo iniciação, planejamento, execução, monitoramento e encerramento."
+    },
+    {
+        "id": 9,
+        "category": "conhecimentos-especificos",
+        "question": "O que são TICs (Tecnologias da Informação e Comunicação)?",
+        "answer": "São tecnologias que permitem o processamento, armazenamento e transmissão de informações de forma digital, incluindo computadores, internet, software, telecomunicações e sistemas de informação."
+    },
+    {
+        "id": 10,
+        "category": "conhecimentos-especificos",
+        "question": "O que é Metodologia Científica?",
+        "answer": "É o conjunto de métodos e técnicas utilizados para conduzir pesquisas científicas de forma sistemática, objetiva e rigorosa, garantindo a validade e confiabilidade dos resultados obtidos."
+    },
+    {
+        "id": 11,
+        "category": "conhecimentos-gerais",
+        "question": "O que é a Realidade Brasileira no contexto do CNU?",
+        "answer": "Refere-se ao conhecimento sobre aspectos sociais, econômicos, políticos e culturais do Brasil contemporâneo, incluindo desigualdades, diversidade regional, desafios de desenvolvimento e características da sociedade brasileira."
+    },
+    {
+        "id": 12,
+        "category": "conhecimentos-especificos",
+        "question": "O que é Inovação Tecnológica?",
+        "answer": "É o processo de criação, desenvolvimento e implementação de novas tecnologias, produtos ou processos que geram valor econômico e social, contribuindo para o avanço científico e competitividade."
+    },
+    {
+        "id": 13,
+        "category": "conhecimentos-gerais",
+        "question": "O que estabelece o princípio da legalidade na administração pública?",
+        "answer": "O princípio da legalidade estabelece que a administração pública só pode fazer o que a lei permite, diferentemente dos particulares que podem fazer tudo que a lei não proíbe."
+    },
+    {
+        "id": 14,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são as características de um Estado Democrático de Direito?",
+        "answer": "O Estado Democrático de Direito caracteriza-se pela separação dos poderes, garantia dos direitos fundamentais, controle judicial dos atos públicos e participação popular."
+    },
+    {
+        "id": 15,
+        "category": "conhecimentos-gerais",
+        "question": "Como o princípio da impessoalidade se aplica nas licitações?",
+        "answer": "O princípio da impessoalidade exige tratamento igualitário a todos os participantes de licitações, sem favorecimentos ou discriminações."
+    },
+    {
+        "id": 16,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os prazos máximos de sigilo de informações na LAI (Lei de Acesso à Informação)?",
+        "answer": "A LAI estabelece que o prazo máximo de sigilo é de 25 anos para informações ultrassecretas, 15 anos para secretas e 5 anos para reservadas."
+    },
+    {
+        "id": 17,
+        "category": "conhecimentos-gerais",
+        "question": "Como é exercido o controle externo da administração pública federal?",
+        "answer": "O controle externo é exercido pelo Congresso Nacional com auxílio do Tribunal de Contas da União (art. 70 da CF)."
+    },
+    {
+        "id": 18,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são as formas de ato de improbidade administrativa?",
+        "answer": "1) Enriquecimento ilícito; 2) Prejuízo ao erário; 3) Atentado aos princípios da administração pública."
+    },
+    {
+        "id": 19,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os principais poderes da administração pública?",
+        "answer": "Vinculado, discricionário, hierárquico, disciplinar, regulamentar e de polícia."
+    },
+    {
+        "id": 20,
+        "category": "conhecimentos-gerais",
+        "question": "Qual a diferença entre serviço público próprio e impróprio?",
+        "answer": "Próprio: essencial (ex: saúde, segurança). Impróprio: de interesse coletivo (ex: telecomunicações)."
+    },
+    {
+        "id": 21,
+        "category": "conhecimentos-gerais",
+        "question": "Quando é obrigatória a modalidade concorrência?",
+        "answer": "Para contratos de maior valor, conforme limites estabelecidos na Lei 8.666/1993."
+    },
+    {
+        "id": 22,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são as categorias de bens públicos?",
+        "answer": "1) Uso comum do povo; 2) Uso especial; 3) Dominicais."
+    },
+    {
+        "id": 23,
+        "category": "conhecimentos-gerais",
+        "question": "Como o princípio da moralidade se relaciona com a ética na administração pública?",
+        "answer": "Exige que o administrador aja não apenas dentro da lei, mas com ética, honestidade e probidade, atendendo ao interesse público."
+    },
+    {
+        "id": 24,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os principais objetivos da LRF (Lei de Responsabilidade Fiscal)?",
+        "answer": "Controlar gastos públicos, planejar orçamentos, evitar endividamento excessivo e garantir transparência na gestão fiscal."
+    },
+    {
+        "id": 25,
+        "category": "conhecimentos-gerais",
+        "question": "Qual o papel do controle interno na administração pública?",
+        "answer": "Avaliar o cumprimento das metas, a gestão de recursos e a conformidade com as normas, além de apoiar o controle externo."
+    },
+    {
+        "id": 26,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os princípios do processo administrativo?",
+        "answer": "Legalidade, finalidade, motivação, contraditório, ampla defesa, razoabilidade e proporcionalidade."
+    },
+    {
+        "id": 27,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são as características do poder de polícia administrativa?",
+        "answer": "Discricionariedade, autoexecutoriedade e coercibilidade, sempre limitado pelos direitos fundamentais."
+    },
+    {
+        "id": 28,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os direitos básicos dos servidores estatutários?",
+        "answer": "Vencimentos, vantagens, licenças, férias, aposentadoria, estável após 3 anos de efetivo exercício."
+    },
+    {
+        "id": 29,
+        "category": "conhecimentos-gerais",
+        "question": "O que caracteriza um convênio na administração pública?",
+        "answer": "Acordo entre entes públicos ou com entidades privadas sem fins lucrativos para execução de políticas públicas."
+    },
+    {
+        "id": 30,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são os requisitos para desapropriação por utilidade pública?",
+        "answer": "Necessidade pública, interesse social ou interesse nacional, com prévia e justa indenização em dinheiro."
+    },
+    {
+        "id": 31,
+        "category": "conhecimentos-gerais",
+        "question": "Quais as cláusulas necessárias em contratos administrativos?",
+        "answer": "Prazo, objeto, preço, condições de execução, direitos/responsabilidades, penalidades e causas de rescisão."
+    },
+    {
+        "id": 32,
+        "category": "conhecimentos-gerais",
+        "question": "Quais atos são considerados lesivos pela Lei 12.846/2013 (Lei Anticorrupção)?",
+        "answer": "Prometer/doar vantagem indevida, fraudar licitações, obstar fiscalização, manipular contratos e dificultar investigações."
+    },
+    {
+        "id": 33,
+        "category": "conhecimentos-gerais",
+        "question": "Quais as sanções por ato de improbidade administrativa?",
+        "answer": "Perda de bens, ressarcimento, multa, suspensão de direitos políticos, perda de função pública e proibição de contratar com o poder público."
+    },
+    {
+        "id": 34,
+        "category": "conhecimentos-gerais",
+        "question": "Como os cidadãos podem exercer controle sobre a administração pública?",
+        "answer": "Através de ouvidorias, acesso à informação, conselhos gestores, audiências públicas e ferramentas de participação digital."
+    },
+    {
+        "id": 35,
+        "category": "conhecimentos-gerais",
+        "question": "O que caracteriza um serviço público essencial?",
+        "answer": "Indispensável à sociedade, prestado diretamente pelo Estado ou delegado, com continuidade e modicidade tarifária."
+    },
+    {
+        "id": 36,
+        "category": "conhecimentos-gerais",
+        "question": "Quais as características do regime jurídico único dos servidores?",
+        "answer": "Ingresso por concurso, direitos/deveres uniformes, estabilidade após 3 anos e regime previdenciário próprio."
+    },
+    {
+        "id": 37,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os princípios do governo digital?",
+        "answer": "Orientação por dados, segurança e privacidade, interoperabilidade, prevalência do digital sobre o analógico."
+    },
+    {
+        "id": 38,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são as bases legais para tratamento de dados na LGPD? (Lei Geral de Proteção de Dados Pessoais)",
+        "answer": "Consentimento, execução de contrato, obrigação legal, políticas públicas, estudos por órgãos de pesquisa, proteção da vida, tutela da saúde, interesse legítimo do controlador."
+    },
+    {
+        "id": 39,
+        "category": "conhecimentos-especificos",
+        "question": "Quais as principais diferenças entre Scrum e Kanban?",
+        "answer": "É um framework com papéis definidos, ciclos iterativos (sprints) e cerimônias fixas, visando a entrega incremental de valor. Kanban, por outro lado, é um sistema visual que gerencia o fluxo de trabalho, permitindo flexibilidade e entregas contínuas, sem ciclos definidos ou papéis obrigatórios."
+    },
+    {
+        "id": 40,
+        "category": "conhecimentos-especificos",
+        "question": "O que é a tríade CIA na segurança da informação?",
+        "answer": "Confidencialidade, Integridade e Disponibilidade - princípios básicos da segurança da informação."
+    },
+    {
+        "id": 41,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os modelos de serviço em cloud computing? (Computação em Nuvem)",
+        "answer": "IaaS (Infraestrutura), PaaS (Plataforma), SaaS (Software) - camadas de abstração tecnológica."
+    },
+    {
+        "id": 42,
+        "category": "conhecimentos-especificos",
+        "question": "Como o blockchain pode ser aplicado no setor público?",
+        "answer": "Registro imutável de documentos, rastreabilidade de processos, identidade digital, votação eletrônica segura."
+    },
+    {
+        "id": 43,
+        "category": "conhecimentos-especificos",
+        "question": "O que é viés algorítmico em sistemas de IA?",
+        "answer": "Tendência discriminatória nos resultados, geralmente refletindo preconceitos presentes nos dados de treinamento."
+    },
+    {
+        "id": 44,
+        "category": "conhecimentos-especificos",
+        "question": "Qual a função do SISP (Sistema de Administração dos Recursos de TI) no governo federal?",
+        "answer": "O Sistema de Administração dos Recursos de TI estabelece normas para gestão de tecnologia no governo federal."
+    },
+    {
+        "id": 45,
+        "category": "conhecimentos-especificos",
+        "question": "O que é o e-PING?",
+        "answer": "Padrão de Interoperabilidade de Governo Eletrônico - conjunto de normas técnicas para integração de sistemas governamentais."
+    },
+    {
+        "id": 46,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os princípios dos dados governamentais abertos?",
+        "answer": "Primários, granulares, em tempo hábil, acessíveis, não discriminatórios, não proprietários e livres de licenças."
+    },
+    {
+        "id": 47,
+        "category": "conhecimentos-especificos",
+        "question": "Quais os pilares da transformação digital no setor público?",
+        "answer": "1) Digitalização de processos; 2) Cultura orientada por dados; 3) Serviços centrados no cidadão; 4) Infraestrutura moderna."
+    },
+    {
+        "id": 48,
+        "category": "conhecimentos-especificos",
+        "question": "Para que serve o framework COBIT?",
+        "answer": "Alinhar TI aos objetivos de negócio, garantir governança eficaz e gerenciar riscos e recursos de TI."
+    },
+    {
+        "id": 49,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os principais tipos de ameaças cibernéticas?",
+        "answer": "Phishing, ransomware, DDoS, malware, APTs (Ameaças Persistentes Avançadas), engenharia social."
+    },
+    {
+        "id": 50,
+        "category": "conhecimentos-especificos",
+        "question": "Quais as vantagens do software livre no governo?",
+        "answer": "Independência de fornecedores, redução de custos, maior controle sobre o código, customização, segurança auditável."
+    },
+    {
+        "id": 51,
+        "category": "conhecimentos-especificos",
+        "question": "O que é arquitetura SOA?",
+        "answer": "Arquitetura Orientada a Serviços - modelo que organiza sistemas como serviços reutilizáveis e interoperáveis."
+    },
+    {
+        "id": 52,
+        "category": "conhecimentos-especificos",
+        "question": "Qual a diferença entre SQL e NoSQL?",
+        "answer": "SQL (Structured Query Language) usa um modelo relacional, com dados organizados em tabelas com linhas e colunas, enquanto NoSQL oferece modelos mais flexíveis e não relacionais, como documentos, chave-valor ou grafos."
+    },
+    {
+        "id": 53,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os benefícios da cultura DevOps?",
+        "answer": "Entrega contínua, integração frequente, automação de processos, colaboração entre equipes, feedback rápido."
+    },
+    {
+        "id": 54,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os níveis de teste de software?",
+        "answer": "Unitário, integração, sistema, aceitação - piramidal, com mais testes unitários que de aceitação."
+    },
+    {
+        "id": 55,
+        "category": "conhecimentos-especificos",
+        "question": "O que são as diretrizes WCAG?",
+        "answer": "Web Content Accessibility Guidelines - padrões para tornar conteúdo web acessível a pessoas com deficiência."
+    },
+    {
+        "id": 56,
+        "category": "conhecimentos-especificos",
+        "question": "O que é pregão eletrônico?",
+        "answer": "Modalidade de licitação realizada em sessão pública por meio eletrônico, prevista na Lei 10.520/2002."
+    },
+    {
+        "id": 57,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são as áreas de conhecimento do PMBOK?",
+        "answer": "Escopo, tempo, custo, qualidade, recursos, comunicações, riscos, aquisições, partes interessadas, integração."
+    },
+    {
+        "id": 58,
+        "category": "conhecimentos-especificos",
+        "question": "O que é a arquitetura TCP/IP?",
+        "answer": "Conjunto de protocolos para comunicação em redes, organizado em camadas: aplicação, transporte, internet e rede."
+    },
+    {
+        "id": 59,
+        "category": "conhecimentos-especificos",
+        "question": "Qual a diferença entre kernel monolítico e micronúcleo?",
+        "answer": "Monolítico: todas funções no núcleo. Micronúcleo: apenas funções essenciais, outros serviços em user space."
+    },
+    {
+        "id": 60,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os tipos de virtualização?",
+        "answer": "Plataforma (máquinas virtuais), aplicação, desktop, armazenamento, rede - isolamento de recursos computacionais."
+    },
+    {
+        "id": 61,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os 5 Vs do Big Data?",
+        "answer": "Volume, Velocidade, Variedade, Veracidade e Valor - características dos dados em grande escala."
+    },
+    {
+        "id": 62,
+        "category": "conhecimentos-especificos",
+        "question": "Como a Internet das Coisas pode beneficiar cidades inteligentes?",
+        "answer": "Monitoramento em tempo real (trânsito, poluição), eficiência energética, gestão de resíduos, segurança pública."
+    },
+    {
+        "id": 63,
+        "category": "conhecimentos-especificos",
+        "question": "Qual a diferença entre aprendizado supervisionado e não supervisionado?",
+        "answer": "Supervisionado: usa dados rotulados. Não supervisionado: descobre padrões em dados não rotulados."
+    },
+    {
+        "id": 64,
+        "category": "conhecimentos-especificos",
+        "question": "Quais são os princípios do design centrado no usuário?",
+        "answer": "Usabilidade, acessibilidade, hierarquia visual, consistência, feedback, prevenção de erros, eficiência."
+    },
+    {
+        "id": 65,
+        "category": "conhecimentos-especificos",
+        "question": "O que é a ICP-Brasil?",
+        "answer": "Infraestrutura de Chaves Públicas Brasileira - sistema nacional de certificação digital com validade jurídica."
+    },
+    {
+        "id": 66,
+        "category": "conhecimentos-especificos",
+        "question": "O que deve conter um plano de recuperação de desastres?",
+        "answer": "Análise de impacto, estratégias de recuperação, procedimentos de ativação, equipes responsáveis, testes periódicos."
+    },
+    {
+        "id": 67,
+        "category": "conhecimentos-gerais",
+        "question": "Quais as espécies de agentes públicos?",
+        "answer": "Agentes políticos (eleitos/nomeados), servidores públicos (efetivos/comissionados) e particulares em colaboração."
+    },
+    {
+        "id": 68,
+        "category": "conhecimentos-gerais",
+        "question": "Qual o prazo prescricional para infrações disciplinares graves?",
+        "answer": "5 anos para infrações graves e 2 anos para as leves/médias, conforme Lei 8.112/1990."
+    },
+    {
+        "id": 69,
+        "category": "conhecimentos-gerais",
+        "question": "Quais são as fases do processo administrativo disciplinar?",
+        "answer": "Instauração, instrução, defesa, relatório, julgamento e recurso, com observância do contraditório e ampla defesa."
+    },
+    {
+        "id": 70,
+        "category": "conhecimentos-gerais",
+        "question": "Quando o Estado responde civilmente por danos causados a terceiros?",
+        "answer": "Responderá objetivamente por danos causados por agentes públicos nessa qualidade, ou por omissão na prestação de serviços."
     }
-  ]
-}
+]
