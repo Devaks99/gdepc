@@ -426,7 +426,7 @@ function getAllSpecificQuestions() {
         id: 112,
         category: "conhecimentos-especificos",
         subject: "Redes e IoT",
-        question: "O protocolo MQTT é amplamente utilizado em IoT devido à sua capacidade de:",
+        question: "O protocolo MQTT (Message Queuing Telemetry Transport) é amplamente utilizado em IoT devido à sua capacidade de:",
         options: [
             "Transmitir grandes volumes de dados não estruturados com alta latência.",
             "Operar com baixo consumo de energia e largura de banda, ideal para dispositivos limitados.",
