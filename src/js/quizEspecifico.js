@@ -197,78 +197,358 @@ function getAllSpecificQuestions() {
                 explanation: "O método misto combina abordagens quantitativas (dados numéricos) e qualitativas (interpretação e significados) para uma análise mais completa."
             }
         ],
-        'tics-dados': [
-            {
-                id: 7,
-                category: "conhecimentos-especificos",
-                subject: "TICs e Dados",
-                question: "O que são Tecnologias da Informação e Comunicação (TICs)?",
-                options: [
-                    "Apenas computadores e internet",
-                    "Tecnologias para processamento, armazenamento e transmissão de informações",
-                    "Somente redes sociais",
-                    "Exclusivamente software de escritório"
-                ],
-                correct: 1,
-                explanation: "TICs são tecnologias que permitem o processamento, armazenamento e transmissão de informações de forma digital, incluindo hardware, software, redes e telecomunicações."
-            },
-            {
-                id: 11,
-                category: "conhecimentos-especificos",
-                subject: "TICs e Dados",
-                question: "Como as TICs contribuem para a modernização da administração pública?",
-                options: [
-                    "Aumentando a burocracia",
-                    "Reduzindo a transparência",
-                    "Promovendo governo eletrônico e eficiência",
-                    "Eliminando a participação cidadã"
-                ],
-                correct: 2,
-                explanation: "As TICs modernizam a administração pública através do governo eletrônico, maior transparência, eficiência operacional e melhor participação cidadã."
-            },
-            {
-                id: 16,
-                category: "conhecimentos-especificos",
-                subject: "TICs e Dados",
-                question: "Qual dessas NÃO é uma característica da computação em nuvem?",
-                options: [
-                    "Autoatendimento sob demanda",
-                    "Amplo acesso à rede",
-                    "Pool de recursos dedicados",
-                    "Elasticidade rápida"
-                ],
-                correct: 2,
-                explanation: "A computação em nuvem utiliza pool de recursos compartilhados, não dedicados, conforme definição do NIST."
-            },
-            {
-                id: 20,
-                category: "conhecimentos-especificos",
-                subject: "TICs e Dados",
-                question: "Qual desses é um benefício da análise de dados (big data) no setor público?",
-                options: [
-                    "Tomada de decisão baseada em evidências",
-                    "Eliminação completa de erros humanos",
-                    "Redução absoluta de custos operacionais",
-                    "Substituição de todos os processos analógicos"
-                ],
-                correct: 0,
-                explanation: "O principal benefício é possibilitar decisões baseadas em evidências, embora não elimine completamente erros ou reduza custos de forma absoluta."
-            },
-            {
-                id: 58,
-                category: "conhecimentos-especificos",
-                subject: "TICs e Dados",
-                question: "Qual dessas tecnologias é mais adequada para tratamento de grandes volumes de dados estruturados e não estruturados?",
-                options: [
-                    "Blockchain",
-                    "Big Data",
-                    "Realidade virtual",
-                    "Internet das Coisas"
-                ],
-                correct: 1,
-                explanation: "Tecnologias de Big Data são especializadas no tratamento de grandes volumes de dados, tanto estruturados quanto não estruturados."
-            }
+       'tics-dados': [
+    {
+        id: 7,
+        category: "conhecimentos-especificos",
+        subject: "TICs e Dados",
+        question: "O que são Tecnologias da Informação e Comunicação (TICs)?",
+        options: [
+            "Apenas computadores e internet",
+            "Tecnologias para processamento, armazenamento e transmissão de informações",
+            "Somente redes sociais",
+            "Exclusivamente software de escritório"
         ],
+        correct: 1,
+        explanation: "TICs são tecnologias que permitem o processamento, armazenamento e transmissão de informações de forma digital, incluindo hardware, software, redes e telecomunicações."
+    },
+    {
+        id: 11,
+        category: "conhecimentos-especificos",
+        subject: "TICs e Dados",
+        question: "Como as TICs contribuem para a modernização da administração pública?",
+        options: [
+            "Aumentando a burocracia",
+            "Reduzindo a transparência",
+            "Promovendo governo eletrônico e eficiência",
+            "Eliminando a participação cidadã"
+        ],
+        correct: 2,
+        explanation: "As TICs modernizam a administração pública através do governo eletrônico, maior transparência, eficiência operacional e melhor participação cidadã."
+    },
+    {
+        id: 16,
+        category: "conhecimentos-especificos",
+        subject: "TICs e Dados",
+        question: "Qual dessas NÃO é uma característica da computação em nuvem?",
+        options: [
+            "Autoatendimento sob demanda",
+            "Amplo acesso à rede",
+            "Pool de recursos dedicados",
+            "Elasticidade rápida"
+        ],
+        correct: 2,
+        explanation: "A computação em nuvem utiliza pool de recursos compartilhados, não dedicados, conforme definição do NIST (Instituto Nacional de Padrões e Tecnologia dos Estados Unidos)."
+    },
+    {
+        id: 20,
+        category: "conhecimentos-especificos",
+        subject: "TICs e Dados",
+        question: "Qual desses é um benefício da análise de dados (big data) no setor público?",
+        options: [
+            "Tomada de decisão baseada em evidências",
+            "Eliminação completa de erros humanos",
+            "Redução absoluta de custos operacionais",
+            "Substituição de todos os processos analógicos"
+        ],
+        correct: 0,
+        explanation: "O principal benefício é possibilitar decisões baseadas em evidências, embora não elimine completamente erros ou reduza custos de forma absoluta."
+    },
+    {
+        id: 58,
+        category: "conhecimentos-especificos",
+        subject: "TICs e Dados",
+        question: "Qual dessas tecnologias é mais adequada para tratamento de grandes volumes de dados estruturados e não estruturados?",
+        options: [
+            "Blockchain",
+            "Big Data",
+            "Realidade virtual",
+            "Internet das Coisas"
+        ],
+        correct: 1,
+        explanation: "Tecnologias de Big Data são especializadas no tratamento de grandes volumes de dados, tanto estruturados quanto não estruturados."
+    },
+    {
+        id: 101,
+        category: "conhecimentos-especificos",
+        subject: "TICs",
+        question: "A interoperabilidade entre sistemas de informação é fundamental para a eficiência das TICs. Assinale a alternativa que melhor define esse conceito:",
+        options: [
+            "Capacidade de um sistema se comunicar e compartilhar dados com outros sistemas, independentemente de plataformas ou tecnologias.",
+            "Processo de padronização de hardware para evitar incompatibilidades entre dispositivos.",
+            "Método exclusivo de criptografia usado em redes privadas virtuais (VPNs).",
+            "Sistema de backup automatizado para garantir redundância de dados."
+        ],
+        correct: 0,
+        explanation: "Interoperabilidade é a capacidade de diferentes sistemas trocarem informações de forma eficiente e independente da tecnologia utilizada, o que é essencial para integração e comunicação nas TICs."
+    },
+    {
+        id: 102,
+        category: "conhecimentos-especificos",
+        subject: "Big Data",
+        question: "Os '5 Vs' do Big Data incluem Volume, Velocidade, Variedade, Veracidade e:",
+        options: [
+            "Virtualização.",
+            "Valor.",
+            "Vulnerabilidade.",
+            "Vigilância."
+        ],
+        correct: 1,
+        explanation: "O 'Valor' é o quinto V do Big Data, pois representa a utilidade real que os dados podem trazer quando analisados corretamente."
+    },
+    {
+        id: 103,
+        category: "conhecimentos-especificos",
+        subject: "IoT",
+        question: "Um desafio crítico na implementação de soluções de IoT em ambientes industriais (IIoT) é:",
+        options: [
+            "A falta de dispositivos com sensores no mercado.",
+            "A necessidade de protocolos de comunicação unificados para integração de sistemas heterogêneos.",
+            "O custo insignificante de armazenamento de dados gerados.",
+            "A ausência de aplicações comerciais para IoT."
+        ],
+        correct: 1,
+        explanation: "A interoperabilidade é um dos maiores gargalos em ambientes heterogêneos, e um dos principais desafios da IoT em ambientes industriais."
+    },
+    {
+        id: 104,
+        category: "conhecimentos-especificos",
+        subject: "Ciência de Dados",
+        question: "Na fase de 'preparação de dados' do ciclo de vida da Ciência de Dados, qual técnica é usada para lidar com valores ausentes em um conjunto de dados?",
+        options: [
+            "One-Hot Encoding.",
+            "Imputação.",
+            "Tokenização.",
+            "Clusterização."
+        ],
+        correct: 1,
+        explanation: "Imputação é a técnica que substitui dados ausentes por estimativas, como média, mediana ou valores preditivos."
+    },
+    {
+        id: 105,
+        category: "conhecimentos-especificos",
+        subject: "LGPD",
+        question: "De acordo com a LGPD, qual é o prazo máximo para que um controlador responda a uma solicitação de acesso a dados pessoais pelo titular?",
+        options: [
+            "15 dias.",
+            "30 dias.",
+            "10 dias.",
+            "45 dias."
+        ],
+        correct: 0,
+        explanation: "Segundo a LGPD, o controlador pode enviar uma resposta imediata ou dentro de 15 dias corridos ao titular dos dados."
+    },
+    {
+        id: 106,
+        category: "conhecimentos-especificos",
+        subject: "Inteligência Artificial",
+        question: "Qual tipo de aprendizado de máquina é usado quando um modelo é treinado com dados rotulados?",
+        options: [
+            "Aprendizado não supervisionado.",
+            "Aprendizado por reforço.",
+            "Aprendizado supervisionado.",
+            "Aprendizado semi-supervisionado."
+        ],
+        correct: 2,
+        explanation: "O aprendizado supervisionado utiliza dados rotulados para ensinar o modelo a prever saídas com base em entradas específicas."
+    },
+    {
+        id: 107,
+        category: "conhecimentos-especificos",
+        subject: "Governança de Dados",
+        question: "Qual componente da governança de dados define políticas para garantir a qualidade e a integridade dos dados?",
+        options: [
+            "Catálogo de dados.",
+            "Data Stewardship.",
+            "Linhagem de dados.",
+            "Master Data Management (MDM)."
+        ],
+        correct: 1,
+        explanation: "Data Stewardship se refere à prática de supervisionar a qualidade, integridade e consistência dos dados na organização."
+    },
+    {
+        id: 108,
+        category: "conhecimentos-especificos",
+        subject: "Big Data",
+        question: "O processo de 'Data Lake' diferencia-se de um 'Data Warehouse' principalmente porque:",
+        options: [
+            "Armazena apenas dados estruturados.",
+            "Exige schema-on-write (esquema definido antes da ingestão).",
+            "Permite armazenar dados brutos em qualquer formato (estruturados, semi-estruturados ou não estruturados).",
+            "Não suporta ferramentas de análise em tempo real."
+        ],
+        correct: 2,
+        explanation: "Um Data Lake permite armazenar dados em seu formato bruto, sem necessidade de esquema pré-definido."
+    },
+    {
+        id: 109,
+        category: "conhecimentos-especificos",
+        subject: "LGPD",
+        question: "Qual princípio da LGPD determina que os dados pessoais devem ser utilizados apenas para finalidades específicas e informadas ao titular?",
+        options: [
+            "Princípio da finalidade.",
+            "Princípio da não discriminação.",
+            "Princípio da transparência.",
+            "Princípio da necessidade."
+        ],
+        correct: 0,
+        explanation: "O princípio da finalidade exige que os dados sejam coletados para propósitos legítimos, específicos e informados previamente ao titular."
+    },
+    {
+        id: 110,
+        category: "conhecimentos-especificos",
+        subject: "IoT",
+        question: "Em Smart Cities, sensores de IoT são frequentemente usados para:",
+        options: [
+            "Substituir totalmente a infraestrutura física por virtualização.",
+            "Monitorar tráfego, qualidade do ar e consumo de energia em tempo real.",
+            "Eliminar a necessidade de governança de dados.",
+            "Reduzir a dependência de Big Data."
+        ],
+        correct: 1,
+        explanation: "Sensores em cidades inteligentes ajudam a monitorar condições em tempo real, permitindo tomada de decisão mais eficiente."
+    },
+    {
+        id: 111,
+        category: "conhecimentos-especificos",
+        subject: "Ciência de Dados",
+        question: "Qual técnica de visualização é mais adequada para representar a correlação entre duas variáveis contínuas?",
+        options: [
+            "Gráfico de barras.",
+            "Gráfico de dispersão (scatter plot).",
+            "Histograma.",
+            "Mapa de calor (heatmap)."
+        ],
+        correct: 1,
+        explanation: "O gráfico de dispersão permite visualizar a relação entre duas variáveis contínuas e identificar padrões ou correlações."
+    },
+    {
+        id: 112,
+        category: "conhecimentos-especificos",
+        subject: "Redes e IoT",
+        question: "O protocolo MQTT é amplamente utilizado em IoT devido à sua capacidade de:",
+        options: [
+            "Transmitir grandes volumes de dados não estruturados com alta latência.",
+            "Operar com baixo consumo de energia e largura de banda, ideal para dispositivos limitados.",
+            "Substituir totalmente o TCP/IP em redes industriais.",
+            "Priorizar a criptografia de dados em detrimento da performance."
+        ],
+        correct: 1,
+        explanation: "MQTT é ideal para dispositivos com recursos limitados por ser leve, eficiente e operar com baixo consumo de energia."
+    },
+    {
+        id: 113,
+        category: "conhecimentos-especificos",
+        subject: "LGPD",
+        question: "Qual órgão é responsável pela fiscalização do cumprimento da LGPD no Brasil?",
+        options: [
+            "ANATEL.",
+            "Autoridade Nacional de Proteção de Dados (ANPD).",
+            "BACEN.",
+            "SERPRO."
+        ],
+        correct: 1,
+        explanation: "A ANPD é o órgão criado especificamente para regulamentar e fiscalizar o cumprimento da LGPD no Brasil."
+    },
+    {
+        id: 114,
+        category: "conhecimentos-especificos",
+        subject: "Inteligência Artificial",
+        question: "O termo 'overfitting' em machine learning refere-se a:",
+        options: [
+            "Um modelo que generaliza bem para dados não vistos.",
+            "Um modelo excessivamente adaptado aos dados de treinamento, perdendo capacidade de generalização.",
+            "A técnica de aumentar o tamanho do dataset para melhorar a acurácia.",
+            "A divisão equilibrada entre dados de treino e teste."
+        ],
+        correct: 1,
+        explanation: "Overfitting ocorre quando o modelo aprende tão bem os dados de treino que não consegue generalizar para novos dados."
+    },
+    {
+        id: 115,
+        category: "conhecimentos-especificos",
+        subject: "Governança de Dados",
+        question: "A 'linhagem de dados' (data lineage) é importante porque:",
+        options: [
+            "Garante que todos os dados sejam armazenados em nuvem.",
+            "Rastreia a origem, transformações e fluxo dos dados ao longo do tempo.",
+            "Substitui a necessidade de metadados.",
+            "Aplica automaticamente técnicas de anonimização."
+        ],
+        correct: 1,
+        explanation: "A linhagem de dados permite rastrear todo o caminho percorrido pelos dados desde sua origem até o uso final."
+    },
+    {
+        id: 116,
+        category: "conhecimentos-especificos",
+        subject: "Cloud Computing",
+        question: "Uma das principais vantagens do modelo de computação em nuvem (cloud computing) é:",
+        options: [
+            "A obrigatoriedade do uso de servidores locais.",
+            "A eliminação total de custos operacionais.",
+            "A escalabilidade, permitindo ajustar recursos conforme a demanda.",
+            "A proibição do acesso remoto por motivos de segurança."
+        ],
+        correct: 2,
+        explanation: "A escalabilidade é uma das maiores vantagens da nuvem, permitindo aumentar ou reduzir recursos conforme a necessidade."
+    },
+    {
+        id: 117,
+        category: "conhecimentos-especificos",
+        subject: "Blockchain",
+        question: "O principal diferencial da tecnologia blockchain em relação a bancos de dados tradicionais é:",
+        options: [
+            "Sua capacidade de armazenar apenas dados não estruturados.",
+            "A centralização das transações em um único servidor.",
+            "A imutabilidade e o registro distribuído das informações.",
+            "O uso exclusivo para aplicações financeiras."
+        ],
+        correct: 2,
+        explanation: "Blockchain é imutável e distribuído, o que garante mais segurança e confiança entre as partes envolvidas."
+    },
+    {
+        id: 118,
+        category: "conhecimentos-especificos",
+        subject: "Redes Móveis",
+        question: "Uma característica do 5G que o torna ideal para aplicações de IoT em tempo real é:",
+        options: [
+            "Alta latência e maior consumo energético.",
+            "Maior largura de banda e baixa latência.",
+            "Exclusividade para uso doméstico.",
+            "Limitação à comunicação entre smartphones apenas."
+        ],
+        correct: 1,
+        explanation: "O 5G permite comunicação em tempo real por ter baixa latência e altíssima velocidade de transmissão."
+    },
+    {
+        id: 119,
+        category: "conhecimentos-especificos",
+        subject: "DevOps",
+        question: "No contexto de DevOps, o termo CI/CD refere-se a:",
+        options: [
+            "Ciclo de Interface e Codificação Direta.",
+            "Integração Contínua e Entrega Contínua.",
+            "Controle Interno e Desenvolvimento Colaborativo.",
+            "Conectividade Integrada e Desempenho Computacional."
+        ],
+        correct: 1,
+        explanation: "CI/CD é um processo de automação para integrar e entregar código continuamente, reduzindo erros e acelerando entregas."
+    },
+    {
+        id: 120,
+        category: "conhecimentos-especificos",
+        subject: "Edge Computing",
+        question: "O modelo de Edge Computing busca resolver qual limitação dos modelos tradicionais de nuvem?",
+        options: [
+            "A falta de conectividade entre dispositivos móveis.",
+            "A dependência de GPUs para processamento local.",
+            "A latência causada pela centralização do processamento em data centers distantes.",
+            "A necessidade de conexão via satélite para todas as operações."
+        ],
+        correct: 2,
+        explanation: "Edge Computing processa os dados mais próximos da fonte para reduzir a latência causada por servidores distantes na nuvem."
+    }
+ ],
         'politicas-cti': [
             {
                 id: 8,
