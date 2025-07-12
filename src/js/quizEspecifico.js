@@ -167,36 +167,246 @@ function getAllSpecificQuestions() {
                 explanation: "O SCRUM é um método ágil que divide o trabalho em ciclos curtos (sprints) com entregas parciais e funcionais, permitindo adaptações rápidas às mudanças."
             }
         ],
-        'metodologia': [
-            {
-                id: 6,
-                category: "conhecimentos-especificos",
-                subject: "Metodologia Científica",
-                question: "Qual é o objetivo principal da metodologia científica?",
-                options: [
-                    "Comprovar teorias pré-existentes",
-                    "Garantir rigor, objetividade e confiabilidade na pesquisa",
-                    "Acelerar o processo de pesquisa",
-                    "Simplificar procedimentos científicos"
-                ],
-                correct: 1,
-                explanation: "A metodologia científica visa garantir rigor, objetividade e confiabilidade na condução de pesquisas, assegurando a validade dos resultados obtidos."
-            },
-            {
-                id: 12,
-                category: "conhecimentos-especificos",
-                subject: "Metodologia Científica",
-                question: "Qual método de pesquisa combina dados numéricos e interpretação qualitativa?",
-                options: [
-                    "Método quantitativo",
-                    "Método qualitativo",
-                    "Método misto",
-                    "Método experimental"
-                ],
-                correct: 2,
-                explanation: "O método misto combina abordagens quantitativas (dados numéricos) e qualitativas (interpretação e significados) para uma análise mais completa."
-            }
+       'metodologia': [
+    {
+        id: 6,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Qual é o objetivo principal da metodologia científica?",
+        options: [
+            "Comprovar teorias pré-existentes",
+            "Garantir rigor, objetividade e confiabilidade na pesquisa",
+            "Acelerar o processo de pesquisa",
+            "Simplificar procedimentos científicos"
         ],
+        correct: 1,
+        explanation: "A metodologia científica visa garantir rigor, objetividade e confiabilidade na condução de pesquisas, assegurando a validade dos resultados obtidos."
+    },
+    {
+        id: 12,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Qual método de pesquisa combina dados numéricos e interpretação qualitativa?",
+        options: [
+            "Método quantitativo",
+            "Método qualitativo",
+            "Método misto",
+            "Método experimental"
+        ],
+        correct: 2,
+        explanation: "O método misto combina abordagens quantitativas (dados numéricos) e qualitativas (interpretação e significados) para uma análise mais completa."
+    },
+    {
+        id: 13,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa científica tem como uma de suas finalidades principais:",
+        options: [
+            "Provar teorias já estabelecidas",
+            "Gerar conhecimento novo e validado",
+            "Reproduzir experimentos anteriores",
+            "Aumentar a complexidade dos problemas"
+        ],
+        correct: 1,
+        explanation: "A pesquisa científica visa gerar conhecimento novo e validado, não apenas provar teorias existentes."
+    },
+    {
+        id: 14,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa básica é caracterizada por:",
+        options: [
+            "Focar em problemas práticos imediatos",
+            "Buscar entender fenômenos sem uma aplicação prática imediata",
+            "Descrever características de uma população",
+            "Testar hipóteses em ambientes controlados"
+        ],
+        correct: 1,
+        explanation: "A pesquisa básica busca entender fenômenos sem uma aplicação prática imediata, focando no conhecimento teórico."
+    },
+    {
+        id: 15,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Qual das seguintes opções é um exemplo de pesquisa aplicada?",
+        options: [
+            "Estudar a estrutura do DNA",
+            "Desenvolver um novo medicamento para tratar diabetes",
+            "Investigar como as crianças aprendem a falar",
+            "Analisar a história da filosofia"
+        ],
+        correct: 1,
+        explanation: "O desenvolvimento de um novo medicamento é um exemplo claro de pesquisa aplicada, que visa resolver um problema prático."
+    },
+    {
+        id: 16,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa exploratória é utilizada quando:",
+        options: [
+            "Há um conhecimento prévio extenso sobre o tema",
+            "O objetivo é descrever características de uma população",
+            "O tema é novo e pouco explorado",
+            "Se busca estabelecer relações de causa e efeito"
+        ],
+        correct: 2,
+        explanation: "A pesquisa exploratória é utilizada quando o tema é novo e pouco explorado, permitindo a familiarização com o assunto."
+    },
+    {
+        id: 17,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa descritiva tem como principal objetivo:",
+        options: [
+            "Identificar causas de um fenômeno",
+            "Testar teorias existentes",
+            "Explorar novas áreas de conhecimento",
+            "Descrever as características de um fenômeno ou população"
+        ],
+        correct: 3,
+        explanation: "O objetivo principal da pesquisa descritiva é descrever as características de um fenômeno ou população, sem buscar causas."
+    },
+    {
+        id: 18,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Qual das seguintes pesquisas é considerada explicativa?",
+        options: [
+            "Uma investigação sobre os efeitos do estresse no desempenho acadêmico",
+            "Um estudo sobre a prevalência de obesidade em adolescentes",
+            "Uma análise das preferências de consumo de jovens adultos",
+            "Um levantamento sobre hábitos alimentares em diferentes regiões"
+        ],
+        correct: 0,
+        explanation: "A investigação sobre os efeitos do estresse no desempenho acadêmico busca entender relações de causa e efeito, caracterizando uma pesquisa explicativa."
+    },
+    {
+        id: 19,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa que busca responder 'por que' um fenômeno ocorre é classificada como:",
+        options: [
+            "Descritiva",
+            "Exploratória",
+            "Explicativa",
+            "Aplicada"
+        ],
+        correct: 2,
+        explanation: "A pesquisa explicativa é aquela que busca responder 'por que' um fenômeno ocorre, estabelecendo relações de causa e efeito."
+    },
+    {
+        id: 20,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Qual é a principal característica da pesquisa qualitativa?",
+        options: [
+            "Focar em dados numéricos e estatísticas",
+            "Buscar entender significados e contextos",
+            "Ser sempre experimental",
+            "Ter um objetivo prático imediato"
+        ],
+        correct: 1,
+        explanation: "A pesquisa qualitativa busca entender significados e contextos, ao contrário da quantitativa, que foca em dados numéricos."
+    },
+    {
+        id: 21,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa quantitativa é mais adequada quando:",
+        options: [
+            "O objetivo é explorar um novo fenômeno",
+            "Se deseja entender a experiência subjetiva dos indivíduos",
+            "Se busca descrever características de uma população",
+            "O foco é em dados qualitativos e narrativos"
+        ],
+        correct: 2,
+        explanation: "A pesquisa quantitativa é mais adequada para descrever características de uma população, utilizando dados numéricos."
+    },
+    {
+        id: 22,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Um exemplo de pesquisa que combina métodos qualitativos e quantitativos é:",
+        options: [
+            "Um estudo que apenas analisa dados estatísticos",
+            "Um experimento em laboratório",
+            "Uma pesquisa que faz entrevistas e aplica questionários",
+            "Uma revisão de literatura"
+        ],
+        correct: 2,
+        explanation: "Um estudo que faz entrevistas e aplica questionários combina métodos qualitativos e quantitativos, caracterizando uma abordagem mista."
+    },
+    {
+        id: 23,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa que visa entender a relação entre o uso de redes sociais e a saúde mental é um exemplo de:",
+        options: [
+            "Pesquisa básica",
+            "Pesquisa aplicada",
+            "Pesquisa descritiva",
+            "Pesquisa explicativa"
+        ],
+        correct: 3,
+        explanation: "A pesquisa que investiga a relação entre o uso de redes sociais e a saúde mental é explicativa, pois busca entender causas e efeitos."
+    },
+    {
+        id: 24,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "Qual das seguintes afirmações sobre a pesquisa exploratória é verdadeira?",
+        options: [
+            "Ela é sempre quantitativa",
+            "É útil para gerar novas hipóteses",
+            "Tem como objetivo descrever um fenômeno",
+            "É utilizada para testar hipóteses"
+        ],
+        correct: 1,
+        explanation: "A pesquisa exploratória é útil para gerar novas hipóteses, pois é realizada em áreas pouco conhecidas."
+    },
+    {
+        id: 25,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa que utiliza questionários para coletar dados sobre a satisfação do cliente é um exemplo de:",
+        options: [
+            "Pesquisa básica",
+            "Pesquisa descritiva",
+            "Pesquisa exploratória",
+            "Pesquisa explicativa"
+        ],
+        correct: 1,
+        explanation: "A coleta de dados sobre a satisfação do cliente por meio de questionários é um exemplo de pesquisa descritiva."
+    },
+    {
+        id: 26,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A pesquisa que busca entender como a introdução de uma nova tecnologia afeta o desempenho dos funcionários é classificada como:",
+        options: [
+            "Pesquisa aplicada",
+            "Pesquisa descritiva",
+            "Pesquisa básica",
+            "Pesquisa exploratória"
+        ],
+        correct: 0,
+        explanation: "A pesquisa que analisa o impacto de uma nova tecnologia no desempenho dos funcionários é aplicada, pois busca resolver um problema prático."
+    },
+    {
+        id: 27,
+        category: "conhecimentos-especificos",
+        subject: "Metodologia Científica",
+        question: "A principal diferença entre pesquisa básica e aplicada é que:",
+        options: [
+            "A pesquisa básica é mais complexa",
+            "A pesquisa aplicada tem um foco prático e imediato",
+            "A pesquisa básica não utiliza métodos científicos",
+            "A pesquisa aplicada não gera conhecimento novo"
+        ],
+        correct: 1,
+        explanation: "A principal diferença é que a pesquisa aplicada tem um foco prático e imediato, enquanto a pesquisa básica é mais teórica e não necessariamente busca uma aplicação imediata."
+    }
+],
        'tics-dados': [
     {
         id: 7,
