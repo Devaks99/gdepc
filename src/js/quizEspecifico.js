@@ -803,6 +803,98 @@ function getAllSpecificQuestions() {
                 explanation: "O Marco Legal de CTI trouxe flexibilização nas contratações e maior facilidade para parcerias público-privadas em pesquisa."
             }
         ],
+        'politicas-publicas': [
+    {
+        id: 50,
+        category: "conhecimentos-especificos",
+        subject: "Políticas Públicas",
+        question: "Considerando o julgamento do Recurso Extraordinário nº 1.010.606, acerca do direito ao esquecimento, assinale a alternativa correta:",
+        options: [
+            "É incompatível com a Constituição Federal a ideia de um direito ao esquecimento...",
+            "O direito ao esquecimento não deve ser aplicado, pois viola o princípio da igualdade...",
+            "O direito ao esquecimento é aplicável, mas limitado a figuras públicas...",
+            "O direito ao esquecimento é inconstitucional apenas em crimes de repercussão midiática...",
+            "Apenas em casos excepcionais, os quais deverão ser analisados pelos magistrados..."
+        ],
+        correct: 0,
+        explanation: "Segundo o STF, é incompatível com a Constituição a ideia de um direito ao esquecimento, ainda que dados sejam verídicos e licitamente obtidos."
+    },
+    {
+        id: 51,
+        category: "conhecimentos-especificos",
+        subject: "Políticas Públicas",
+        question: "Qual o objetivo da Comissão Nacional da Verdade, instituída pela Lei nº 12.528/11?",
+        options: [
+            "Investigar as atividades de grupos de oposição entre 1946 e 1988.",
+            "Revisar a anistia com objetivo de propor uma PEC.",
+            "Esclarecer violações de direitos humanos para promover a reconciliação nacional.",
+            "Investigar crimes não resolvidos entre 1946 e 1988."
+        ],
+        correct: 2,
+        explanation: "A Comissão Nacional da Verdade visa esclarecer violações de direitos humanos de 1946 a 1988 para efetivar o direito à memória e promover a reconciliação."
+    },
+    {
+        id: 52,
+        category: "conhecimentos-especificos",
+        subject: "Políticas Públicas",
+        question: "Quais são os elementos fundamentais para a elaboração de uma política pública?",
+        options: [
+            "Interesse pessoal e solução privada.",
+            "Participação exclusiva do setor privado.",
+            "Ação governamental sem objetivo claro.",
+            "Decisão baseada apenas em interesses individuais.",
+            "Intencionalidade pública e resposta a um problema público."
+        ],
+        correct: 4,
+        explanation: "Políticas públicas devem ter intencionalidade pública e responder a um problema coletivo identificado."
+    },
+    {
+        id: 53,
+        category: "conhecimentos-especificos",
+        subject: "Políticas Públicas",
+        question: "O problema público se materializa, por exemplo, na:",
+        options: [
+            "Diferença entre a realidade ideal e os recursos disponíveis.",
+            "Disparidade entre o status quo e uma situação pública desejada.",
+            "Ausência de políticas públicas para atender demandas sociais.",
+            "Falta de consenso entre gestores públicos.",
+            "Discrepância entre a legislação vigente e as necessidades sociais."
+        ],
+        correct: 1,
+        explanation: "Problemas públicos surgem da diferença entre a realidade atual (status quo) e o que se deseja alcançar coletivamente."
+    },
+    {
+        id: 54,
+        category: "conhecimentos-especificos",
+        subject: "Políticas Públicas",
+        question: "A instalação de academias públicas para idosos representa uma política pública:",
+        options: [
+            "Legislativa.",
+            "Recreativa.",
+            "Distributiva.",
+            "Associativa.",
+            "Redistributiva."
+        ],
+        correct: 2,
+        explanation: "É uma política distributiva, pois envolve o fornecimento direto de bens ou serviços a um grupo específico."
+    },
+    {
+        id: 55,
+        category: "conhecimentos-especificos",
+        subject: "Políticas Públicas",
+        question: "A gratuidade no transporte público para idosos, subsidiada pela prefeitura, é um exemplo de política:",
+        options: [
+            "Regulatória.",
+            "Constitutiva.",
+            "Distributiva.",
+            "Redistributiva.",
+            "Estruturadora."
+        ],
+        correct: 2,
+        explanation: "Essa medida é distributiva, pois oferece benefício direto a um grupo específico com financiamento público."
+    }
+   ],
+
         'lgpd': [
             {
                 id: 13,
